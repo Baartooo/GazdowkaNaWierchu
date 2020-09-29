@@ -19,7 +19,7 @@ const { spaceId, accessToken } = contentfulConfig
 
 if (!spaceId || !accessToken) {
   throw new Error(
-    'Contentful spaceId and the access token need to be provided.'
+    'Contentful spaceId and the access token need to be provided.',
   )
 }
 
@@ -33,6 +33,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
