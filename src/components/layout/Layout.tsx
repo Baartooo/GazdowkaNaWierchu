@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import './Layout.scss'
 
-class Template extends React.Component {
-  render() {
-    const { children } = this.props
+const Layout: FC = () => {
+  const { children } = this.props
 
-    return (
-      <>
-        {children}
-      </>
-    )
-  }
+  return (
+    <>
+      {children}
+    </>
+  )
+
 }
 
-export default Template
+export default Layout

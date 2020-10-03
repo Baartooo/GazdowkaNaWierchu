@@ -1,26 +1,23 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout/Layout'
 
-class RootIndex extends React.Component {
-  render() {
-
-    return (
-      <Layout location={this.props.location}>
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100vh',
-          width: '100vw',
-        }}>
-          <span>Gazdówka na Wierchu - zapraszamy wkrótce</span>
-        </div>
-      </Layout>
-    )
-  }
+const RootIndex: FC = () => {
+  return (
+    <Layout location={this.props.location}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        width: '100vw',
+      }}>
+        <span>Gazdówka na Wierchu - zapraszamy wkrótce</span>
+      </div>
+    </Layout>
+  )
 }
 
 export default RootIndex
