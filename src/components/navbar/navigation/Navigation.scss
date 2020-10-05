@@ -1,32 +1,48 @@
 @import "../../../styles/config";
 
 .navbar__navigation {
-  display: none;
+  position: absolute;
 
+  display: flex;
+
+  top: 70px;
+  width: 100%;
+
+  max-height: 0;
+
+  flex-direction: column;
+
+  background-color: $color-menu;
   color: $color-white;
+  font-size: 20px;
+
+  overflow: hidden;
+
   @media (min-width: $min-desktop) {
-    display: flex;
+    position: static;
 
-    margin-left: 100px;
+    margin: 0 0 0 100px;
 
-
+    width: auto;
     height: 100%;
 
-    font-size: 20px;
+    flex-direction: row;
   }
 }
 
 .navbar__navigation-item {
   display: flex;
 
+  margin: 0 0 10px 15px;
+
+  align-items: center;
+
+  white-space: nowrap;
+
   @media (min-width: $min-desktop) {
     margin-right: 50px;
 
-    align-items: center;
-
     height: 100%;
-
-    white-space: nowrap;
   }
 
 }
@@ -34,22 +50,24 @@
 .navbar__navigation-link {
   display: flex;
 
+  width: 100%;
+
+  justify-content: center;
+
+  color: $color-white;
+  text-decoration: none;
+
   transition: $transition-leave;
 
   &.active,
   &:hover {
     color: $color-active-link;
     transition: $transition-enter;
-
   }
 
   @media (min-width: $min-desktop) {
     height: 80%;
 
     align-items: center;
-
-    color: $color-white;
-    text-decoration: none;
   }
-
 }
