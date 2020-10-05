@@ -22,3 +22,16 @@
 
   color: $color-white;
 }
+
+.navbar__toggle-button {
+  margin-left: auto;
+
+  width: 20px;
+
+  cursor: pointer;
+  transition: $transition-leave;
+  &:hover {
+    opacity: .5;
+    transition: $transition-enter;
+  }
+}

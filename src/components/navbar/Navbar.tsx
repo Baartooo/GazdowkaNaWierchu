@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-
-import LogoWhite from '../../assets/images/logo-white.png';
-import './Navbar.scss';
 import { Navigation } from './navigation/Navigation';
 
+import LogoWhite from '../../assets/images/logo-white.png';
+import HamburgerMenu from '../../assets/svg/hamburger-menu.svg';
+import './Navbar.scss';
+
 export const Navbar: FC = () => {
-  console.log();
 
   return (
     <header className={'navbar'}>
@@ -20,6 +20,7 @@ export const Navbar: FC = () => {
       </div>
 
       <Navigation />
+      <img src={HamburgerMenu}  className={'navbar__toggle-button'}/>
 
     </header>
   );
