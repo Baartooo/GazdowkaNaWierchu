@@ -1,16 +1,18 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 
-import './Layout.scss'
+import './Layout.scss';
+import { Navbar } from '../navbar/Navbar';
 
-const Layout: FC = () => {
-  const { children } = this.props
+const Layout: FC = (props) => {
+  const { children } = props;
 
   return (
     <>
+      <Navbar />
       {children}
     </>
-  )
+  );
 
-}
+};
 
-export default Layout
+export default Layout;

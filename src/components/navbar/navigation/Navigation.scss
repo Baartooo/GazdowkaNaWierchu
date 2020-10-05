@@ -1,0 +1,55 @@
+@import "../../../styles/config";
+
+.navbar__navigation {
+  display: none;
+
+  color: $color-white;
+  @media (min-width: $min-desktop) {
+    display: flex;
+
+    margin-left: 100px;
+
+
+    height: 100%;
+
+    font-size: 20px;
+  }
+}
+
+.navbar__navigation-item {
+  display: flex;
+
+  @media (min-width: $min-desktop) {
+    margin-right: 50px;
+
+    align-items: center;
+
+    height: 100%;
+
+    white-space: nowrap;
+  }
+
+}
+
+.navbar__navigation-link {
+  display: flex;
+
+  transition: $transition-leave;
+
+  &.active,
+  &:hover {
+    color: $color-active-link;
+    transition: $transition-enter;
+
+  }
+
+  @media (min-width: $min-desktop) {
+    height: 80%;
+
+    align-items: center;
+
+    color: $color-white;
+    text-decoration: none;
+  }
+
+}

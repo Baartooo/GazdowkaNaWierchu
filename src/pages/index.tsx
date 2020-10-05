@@ -1,26 +1,19 @@
-import React, { FC } from 'react'
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import { Helmet } from 'react-helmet'
-import Layout from '../components/layout/Layout'
+import React, { FC } from 'react';
+import { graphql } from 'gatsby';
+import get from 'lodash/get';
+import { Helmet } from 'react-helmet';
+import Layout from '../components/layout/Layout';
 
-const RootIndex: FC = () => {
+const RootIndex: FC = (props) => {
+
   return (
-    <Layout location={this.props.location}>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        width: '100vw',
-      }}>
-        <span>Gazdówka na Wierchu - zapraszamy wkrótce</span>
-      </div>
-    </Layout>
-  )
-}
+    <div>
 
-export default RootIndex
+    </div>
+  );
+};
+
+export default RootIndex;
 
 export const pageQuery = graphql`
   query HomeQuery {
@@ -73,4 +66,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

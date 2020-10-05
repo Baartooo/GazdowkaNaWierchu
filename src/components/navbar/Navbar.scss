@@ -1,0 +1,25 @@
+@import "../../styles/config";
+
+.navbar {
+  position: fixed;
+  display: flex;
+
+  top: 0;
+  left: 0;
+
+  align-items: center;
+
+  width: 100vw;
+  height: 70px;
+
+  background: $color-menu;
+}
+
+.navbar__logo-wrapper {
+  margin-left: 15px;
+
+  width: 130px;
+  min-width: 130px;
+
+  color: $color-white;
+}
