@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 import { Link } from 'gatsby';
 
 import './Navigation.scss';
@@ -8,7 +8,7 @@ interface INavigation {
   hideNavigation: () => void;
 }
 
-export const Navigation: FC<INavigation> = (props) => {
+const Navigation: FC<INavigation> = (props) => {
   const {
     wrapperRef,
     hideNavigation,
@@ -44,3 +44,5 @@ export const Navigation: FC<INavigation> = (props) => {
     </nav>
   );
 };
+
+export default React.memo(Navigation);
