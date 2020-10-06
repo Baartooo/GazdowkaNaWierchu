@@ -1,0 +1,21 @@
+@import "../../styles/config";
+
+.homepage {
+  width: 100vw;
+  height: 90vh;
+
+  overflow: hidden;
+}
+
+.homepage__background {
+  width: 100vw;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 50% 65%;
+
+  @media (min-width: $min-desktop) {
+    object-position: 50% 47%;
+  }
+
+}
