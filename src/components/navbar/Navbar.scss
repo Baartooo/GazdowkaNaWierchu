@@ -1,18 +1,24 @@
 @import "../../styles/config";
 
 .navbar {
-  position: fixed;
   display: flex;
+  position: relative;
 
   top: 0;
   left: 0;
 
   align-items: center;
+  justify-content: flex-end;
 
   width: 100vw;
   height: 70px;
 
   background: $color-menu;
+  box-shadow: 0 3px 10px 3px $color-black;
+
+  @media (min-width: $min-desktop) {
+    justify-content: flex-start;
+  }
 }
 
 .navbar__logo-wrapper {
@@ -22,4 +28,81 @@
   min-width: 130px;
 
   color: $color-white;
+}
+
+.navbar__phone-wrapper {
+  display: flex;
+
+  margin: 0 20px 0 auto;
+
+  height: 100%;
+
+  @media (min-width: $min-mobile) {
+    margin-right: 30px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin-right: 50px;
+  }
+}
+
+.navbar__phone-link {
+  display: flex;
+
+  height: 100%;
+
+  flex-direction: row;
+  align-items: center;
+
+  text-decoration: none;
+  color: $color-white;
+
+  transition: $transition-leave;
+
+  &:hover {
+    color: $color-active-link;
+    transition: $transition-enter;
+  }
+
+}
+
+.navbar__phone {
+  height: 20%;
+
+  @media (min-width: $min-desktop) {
+    height: 25%;
+  }
+}
+
+.navbar__phone-number {
+  margin-left: 5px;
+  font-size: 13px;
+  white-space: nowrap;
+
+  @media (min-width: $min-desktop) {
+    font-size: 16px;
+  }
+}
+
+
+.navbar__toggle-button {
+  display: block;
+
+  margin-right: 10px;
+
+  width: 20px;
+
+  cursor: pointer;
+  transition: $transition-leave;
+
+  &:hover {
+    opacity: .5;
+    transition: $transition-enter;
+  }
+
+  @media (min-width: $min-desktop) {
+    display: none;
+
+    margin-left: auto;
+  }
 }
