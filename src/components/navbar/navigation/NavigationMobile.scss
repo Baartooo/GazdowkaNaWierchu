@@ -1,0 +1,59 @@
+@import "../../../styles/config";
+
+.dropdown-navigation {
+  position: absolute;
+
+  display: flex;
+
+  top: 70px;
+  width: 100%;
+
+  max-height: 0;
+
+  flex-direction: column;
+
+  background-color: $color-menu;
+  color: $color-white;
+  font-size: 20px;
+
+  overflow: hidden;
+  transition: max-height .1s ease-out;
+
+  @media (min-width: $min-desktop) {
+    display: none;
+  }
+
+  &.opened {
+    max-height: 500px;
+    transition: max-height .15s ease-in;
+  }
+}
+
+.dropdown-navigation__item {
+  display: flex;
+
+  margin: 0 0 10px 15px;
+
+  align-items: center;
+
+  white-space: nowrap;
+}
+
+.dropdown-navigation__link {
+  display: flex;
+
+  width: 100%;
+
+  justify-content: center;
+
+  color: $color-white;
+  text-decoration: none;
+
+  transition: $transition-leave;
+
+  &.active,
+  &:hover {
+    color: $color-active-link;
+    transition: $transition-enter;
+  }
+}
