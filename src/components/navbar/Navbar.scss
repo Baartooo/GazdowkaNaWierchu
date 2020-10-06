@@ -56,9 +56,13 @@
   text-decoration: none;
   color: $color-white;
 
+  transition: $transition-leave;
+
   &:hover {
-    opacity: .7;
+    color: $color-active-link;
+    transition: $transition-enter;
   }
+
 }
 
 .navbar__phone {
