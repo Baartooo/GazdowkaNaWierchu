@@ -1,10 +1,10 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
+import React, { FC, useState } from 'react';
 import NavigationDesktop from './navigation/NavigationDesktop';
 import NavigationMobile from './navigation/NavigationMobile';
-import { gsap } from 'gsap';
-import { isMobile } from './helpers/navigation.helper';
+import info from '../../company-info/info.json';
 
 import LogoWhite from '../../assets/images/logo-white.png';
+import Phone from '../../assets/svg/phone-call.svg';
 import HamburgerMenu from '../../assets/svg/hamburger-menu.svg';
 import './Navbar.scss';
 
@@ -14,6 +14,7 @@ export const Navbar: FC = () => {
     const toggleNavigation = () => {
       setIsNavigationOpened(isNavigationOpened => !isNavigationOpened);
     };
+
 
     return (
       <header className={'navbar'}>
@@ -28,7 +29,16 @@ export const Navbar: FC = () => {
         </div>
 
         <NavigationDesktop />
-        <NavigationMobile isOpened={isNavigationOpened} toggleNavigation={toggleNavigation}/>
+        <NavigationMobile isOpened={isNavigationOpened} toggleNavigation={toggleNavigation} />
+
+        <div className={'navbar__phone-wrapper'}>
+          <a href={`tel:${info.phoneNumber}`} className={'navbar__phone-link'}>
+            <img src={Phone} className={'navbar__phone'} />
+            <span className={'navbar__phone-number'}>{info.phoneNumber}</span>
+          </a>
+        </div>
+
+
         <img src={HamburgerMenu} className={'navbar__toggle-button'} onClick={toggleNavigation} />
 
       </header>
