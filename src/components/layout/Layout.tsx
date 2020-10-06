@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import './Layout.scss';
 import { Navbar } from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 
 const Layout: FC = (props) => {
   const { children } = props;
@@ -10,6 +11,7 @@ const Layout: FC = (props) => {
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 
