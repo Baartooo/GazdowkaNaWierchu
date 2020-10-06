@@ -1,0 +1,84 @@
+@import "../../styles/config";
+
+.footer {
+  position: fixed;
+
+  bottom: 0;
+
+  padding: 10px 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100vw;
+  min-height: 100px;
+
+  background-color: $color-menu;
+
+  @media (min-width: $min-desktop) {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.footer__item-wrapper {
+  display: flex;
+
+  margin-bottom: 20px;
+
+  align-items: center;
+
+  @media (min-width: $min-desktop) {
+    margin-bottom: 0;
+
+    height: 50%;
+  }
+}
+
+.footer__link {
+  display: flex;
+
+  height: 100%;
+
+  align-items: center;
+
+  text-decoration: none;
+  color: $color-white;
+
+  transition: $transition-leave;
+
+  &:hover {
+    color: $color-active-link;
+    transition: $transition-enter;
+  }
+}
+
+.footer__icon {
+  height: 15px;
+
+  @media (min-width: $min-desktop) {
+    height: 30px;
+  }
+}
+
+.footer__info {
+  margin-left: 10px;
+
+  font-size: 10px;
+  white-space: nowrap;
+
+  @media (min-width: $min-desktop) {
+    font-size: 15px;
+  }
+}
+
+.footer__info--smaller {
+  font-size: 8px;
+
+  @media (min-width: $min-desktop) {
+    font-size: 11px;
+  }
+}
