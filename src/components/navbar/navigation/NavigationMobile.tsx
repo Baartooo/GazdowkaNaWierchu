@@ -1,5 +1,12 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
+import {
+  home,
+  offer,
+  about,
+  gallery,
+  contact,
+} from '../../../utils/routes';
 
 import './NavigationMobile.scss';
 
@@ -18,28 +25,28 @@ const Navigation: FC<INavigation> = (props) => {
   return (
     <nav className={`dropdown-navigation ${isOpened ? 'opened' : ''}`} role={'navigation'}>
       <div className={'dropdown-navigation__item'}>
-        <Link to="/" className={'dropdown-navigation__link'} activeClassName={'active'} onClick={toggleNavigation}>
+        <Link to={home} className={'dropdown-navigation__link'} activeClassName={'active'} onClick={toggleNavigation}>
           witamy
         </Link>
       </div>
       <div className={'dropdown-navigation__item'}>
-        <Link to="/offer" className={'dropdown-navigation__link'} activeClassName={'active'} onClick={toggleNavigation}>
+        <Link to={offer} className={'dropdown-navigation__link'} activeClassName={'active'} onClick={toggleNavigation}>
           oferta
         </Link>
       </div>
       <div className={'dropdown-navigation__item'}>
-        <Link to="/about" className={'dropdown-navigation__link'} activeClassName={'active'} onClick={toggleNavigation}>
+        <Link to={about} className={'dropdown-navigation__link'} activeClassName={'active'} onClick={toggleNavigation}>
           o nas
         </Link>
       </div>
       <div className={'dropdown-navigation__item'}>
-        <Link to="/gallery" className={'dropdown-navigation__link'} activeClassName={'active'}
+        <Link to={gallery} className={'dropdown-navigation__link'} activeClassName={'active'}
               onClick={toggleNavigation}>
           galeria
         </Link>
       </div>
       <div className={'dropdown-navigation__item'}>
-        <Link to="/contact" className={'dropdown-navigation__link'} activeClassName={'active'}
+        <Link to={contact} className={'dropdown-navigation__link'} activeClassName={'active'}
               onClick={toggleNavigation}>
           kontakt
         </Link>

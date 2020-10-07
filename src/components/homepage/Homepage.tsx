@@ -13,6 +13,12 @@ const Homepage: FC = (props) => {
         alt={'domek w górach'}
         className={'homepage__background'}
       />
+      <div className={'homepage__overlay'}>
+        <h1 className={'homepage__welcome'}>
+          Gazdówka na Wierchu <br />
+          Zapraszamy
+        </h1>
+      </div>
     </div>
   );
 };
