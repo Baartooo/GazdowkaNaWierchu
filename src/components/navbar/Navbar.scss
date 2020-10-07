@@ -2,7 +2,7 @@
 
 .navbar {
   display: flex;
-  position: relative;
+  position: fixed;
 
   top: 0;
   left: 0;
@@ -16,18 +16,35 @@
   background: $color-menu;
   box-shadow: 0 3px 10px 3px $color-black;
 
+  z-index: 100;
+
   @media (min-width: $min-desktop) {
     justify-content: flex-start;
   }
 }
 
-.navbar__logo-wrapper {
+.navbar__logo-link {
+  display: flex;
+
   margin-left: 15px;
 
-  width: 130px;
+  height: 100%;
   min-width: 130px;
 
-  color: $color-white;
+  transition: $transition-leave;
+
+  &:hover {
+    opacity: .6;
+    transition: $transition-enter;
+  }
+}
+
+.navbar__logo-wrapper {
+  display: flex;
+
+  width: 130px;
+
+  align-items: center;
 }
 
 .navbar__phone-wrapper {

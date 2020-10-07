@@ -1,12 +1,16 @@
 {
   "phoneNumber": "+48 501 421 113",
+
   "facebookName": "Gazdówka na wierchu",
-  "facebookLink": "",
+  "facebookLink": "#",
+
   "mail": "gazdowka.tatary@gmail.com",
+
   "addressFirstLine": "ul. Stefana Batorego 4",
   "addressSecondLine": "32-425 Biały Dunajec",
-  "addressLink": "",
-  "companyInfoFirstLine": "Nazwa firmy",
+  "addressLink": "#",
+
+  "companyInfoFirstLine": "Gazdówka na Wierchu",
   "companyInfoSecondLine": "+48 501 421 113",
-  "companyInfoThirdLine": "NIP: 000-000-000"
+  "companyInfoThirdLine": "NIP: 637-17-35-325"
 }

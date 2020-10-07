@@ -16,6 +16,7 @@ $font-family: 'Montserrat', sans-serif;
 $font-heading: 'Open Sans', sans-serif;
 $font-size: 16px;
 $font-size-min: 13px;
+$font-weight-bold: 700;
 $line-height: 1.5;
 
 // Colors
@@ -82,7 +83,7 @@ $segment-padding: 200px; //percentage-based segments spacing
 // remove this map to disable vertical scaling
 // value 1 = height breakpoint, value 2 = multiplier
 $scale: (
-  (920px, 0.975),
-  (800px, 0.95),
-  (690px, 0.925),
+                (920px, 0.975),
+                (800px, 0.95),
+                (690px, 0.925),
 );
