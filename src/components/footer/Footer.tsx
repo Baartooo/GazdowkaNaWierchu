@@ -25,7 +25,7 @@ const Footer: FC = (props) => {
     <footer className={'footer'}>
 
       <div className={'footer__item-wrapper'}>
-        <a href={facebookLink} className={'footer__link'}>
+        <a href={facebookLink} className={'footer__link'} target={'_blank'}>
           <img src={Facebook} className={'footer__icon'} />
           <div className={'footer__info'}>
             {facebookName}
@@ -43,7 +43,7 @@ const Footer: FC = (props) => {
       </div>
 
       <div className={'footer__item-wrapper'}>
-        <a href={addressLink} className={'footer__link'}>
+        <a href={addressLink} className={'footer__link'} target={'_blank'}>
           <img src={Pin} className={'footer__icon'} />
           <div className={'footer__info footer__info--smaller'}>
             {addressFirstLine} <br />
