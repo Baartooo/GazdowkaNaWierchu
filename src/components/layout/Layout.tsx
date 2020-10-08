@@ -11,7 +11,9 @@ const Layout: FC = (props) => {
   return (
     <>
       <Navbar />
-      {children}
+      <main>
+        {children}
+      </main>
       <Footer />
     </>
   );
