@@ -3,6 +3,9 @@ $container-gutter-mobile: $gutter;
 $container-gutter-tablet: 50px;
 $container-gutter-desktop: 70px;
 
+//important sizes
+$navbar-height: 60px;
+
 // grid
 $grid-column-count: 12;
 $grid-baseline: 16px;
@@ -26,7 +29,6 @@ $color-placeholder: #ddd;
 $color-white: #fff;
 $color-black: #000;
 $color-active-link: #ca842e;
-
 $color-menu: #343434;
 
 // Timings

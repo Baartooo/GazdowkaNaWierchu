@@ -1,1 +1,39 @@
 @import "../../styles/config";
+
+.gallery {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+
+  padding-top: $navbar-height;
+
+  width: 100vw;
+  min-height: 200vh;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  &::after {
+    position: absolute;
+    top: 20%;
+
+    content: '';
+
+    width: 300vw;
+    height: 300px;
+    opacity: .7;
+
+    background-color: $color-active-link;
+
+    transform-origin: 50% 50%;
+    transform: rotate(-25deg);
+
+    @media (min-width: $min-tablet) {
+      height: 300px;
+    }
+
+    @media (min-width: $min-desktop) {
+      height: 400px;
+    }
+  }
+}

@@ -11,7 +11,7 @@
   justify-content: flex-end;
 
   width: 100vw;
-  height: 70px;
+  height: $navbar-height;
 
   background: $color-menu;
   box-shadow: 0 3px 10px 3px $color-black;
@@ -29,7 +29,7 @@
   margin-left: 15px;
 
   height: 100%;
-  min-width: 130px;
+  min-width: 120px;
 
   transition: $transition-leave;
 
@@ -42,7 +42,7 @@
 .navbar__logo-wrapper {
   display: flex;
 
-  width: 130px;
+  width: 120px;
 
   align-items: center;
 }
