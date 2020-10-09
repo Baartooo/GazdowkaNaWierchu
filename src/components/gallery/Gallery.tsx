@@ -30,7 +30,25 @@ const images = [
 ];
 
 
-const options = {};
+const options = {
+  settings: {
+    disablePanzoom: true,
+    disableWheelControls: true,
+    hideControlsAfter: 3000,
+    lightboxTransitionSpeed: 0.6,
+    lightboxTransitionTimingFunction: 'linear',
+    overlayColor: 'rgba(0, 0, 0, 0.9)',
+    slideAnimationType: 'fade',
+    slideSpringValues: [300, 200],
+    slideTransitionSpeed: 0.6,
+    slideTransitionTimingFunction: 'linear',
+  },
+  buttons: {
+    showAutoplayButton: false,
+    showThumbnailsButton: false,
+    showDownloadButton: false,
+  },
+};
 
 export const Gallery: FC = (props) => {
   const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(images.length);
@@ -43,7 +61,6 @@ export const Gallery: FC = (props) => {
   useEffect(() => {
     if (imagesToBeLoaded === 0) {
       setAreImagesVisible(true);
-      console.log('done');
     }
   }, [imagesToBeLoaded]);
 

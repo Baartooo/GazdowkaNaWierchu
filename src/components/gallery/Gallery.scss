@@ -1,5 +1,7 @@
 @import "../../styles/config";
 
+$wholePage: 100vh;
+
 .gallery {
   position: relative;
   display: flex;
@@ -8,11 +10,16 @@
   padding-top: $navbar-height;
 
   width: 100vw;
+  min-height: calc(#{$wholePage} - #{$footer-height-mobile} - 20px);
 
   justify-content: center;
   align-items: flex-start;
 
   animation: fadeInAnimation ease 1s;
+
+  @media (min-width: $min-desktop) {
+    min-height: calc(#{$wholePage} - #{$footer-height-desktop} - 20px);
+  }
 
   &::after {
     position: absolute;

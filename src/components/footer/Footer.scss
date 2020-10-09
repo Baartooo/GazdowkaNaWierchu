@@ -16,13 +16,15 @@
   align-items: center;
 
   width: 100vw;
-  min-height: 80px;
+  height: $footer-height-mobile;
 
   background-color: $color-menu;
 
   @media (min-width: $min-desktop) {
     flex-direction: row;
     padding: 0;
+
+    height: $footer-height-desktop;
   }
 
   &.fixed {
