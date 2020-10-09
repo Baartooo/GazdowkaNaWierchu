@@ -1,11 +1,12 @@
 @import "../../styles/config";
 
 .footer {
-  position: fixed;
+  position: relative;
   z-index: 100;
 
   bottom: 0;
 
+  margin-top: 20px;
   padding: 10px 0;
 
   display: flex;
@@ -22,6 +23,12 @@
   @media (min-width: $min-desktop) {
     flex-direction: row;
     padding: 0;
+  }
+
+  &.fixed {
+    position: fixed;
+
+    margin: 0;
   }
 }
 
