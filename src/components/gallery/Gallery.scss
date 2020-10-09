@@ -8,9 +8,10 @@ $wholePage: 100vh;
   overflow: hidden;
 
   padding-top: $navbar-height;
+  padding-bottom: 10px;
 
   width: 100vw;
-  min-height: calc(#{$wholePage} - #{$footer-height-mobile} - 20px);
+  min-height: calc(#{$wholePage} - #{$footer-height-mobile});
 
   justify-content: center;
   align-items: flex-start;
