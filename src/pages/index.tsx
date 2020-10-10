@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import { Helmet } from 'react-helmet';
 import Homepage from '../components/homepage/Homepage';
