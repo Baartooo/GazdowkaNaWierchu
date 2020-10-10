@@ -1,57 +1,6 @@
 @import "../../styles/config";
 
-$wholePage: 100vh;
-
 .gallery {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-
-  padding-top: $navbar-height;
-  padding-bottom: 10px;
-
-  width: 100vw;
-  min-height: calc(#{$wholePage} - #{$footer-height-mobile});
-
-  justify-content: center;
-  align-items: flex-start;
-
-  animation: fadeInAnimation ease 1s;
-
-  @media (min-width: $min-desktop) {
-    min-height: calc(#{$wholePage} - #{$footer-height-desktop} - 20px);
-  }
-
-  &::after {
-    position: fixed;
-    top: 200px;
-
-    content: '';
-
-    width: 300vw;
-    height: 200px;
-    opacity: .7;
-
-    background-color: $color-active-link;
-
-    transform-origin: 50% 50%;
-    transform: rotate(-25deg);
-
-    @media (min-width: $min-tablet) {
-      top: 300px;
-
-      height: 300px;
-    }
-
-    @media (min-width: $min-desktop) {
-      top: 400px;
-
-      height: 400px;
-    }
-  }
-}
-
-.gallery__wrapper {
   position: relative;
   z-index: 10;
 

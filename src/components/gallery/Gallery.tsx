@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
+import StripeContainer from '../stripeContainer/StripeContainer';
 import PageHeader from '../pageHeader/PageHeader';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import { SRLWrapper } from 'simple-react-lightbox';
@@ -68,8 +69,8 @@ export const Gallery: FC = (props) => {
 
 
   return (
-    <div className={'gallery'}>
-      <section className={'gallery__wrapper'}>
+    <StripeContainer>
+      <section className={'gallery'}>
         <PageHeader content={'Galeria'} />
 
         <div className={'gallery__images'}>
@@ -108,7 +109,7 @@ export const Gallery: FC = (props) => {
 
       </section>
 
-    </div>
+    </StripeContainer>
   );
 };
 
