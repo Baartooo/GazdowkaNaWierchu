@@ -2,34 +2,12 @@ import React, { FC, useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { PageHeader } from '../pageHeader/PageHeader';
+import PageHeader from '../pageHeader/PageHeader';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import { SRLWrapper } from 'simple-react-lightbox';
 import Loader from 'react-loader-spinner';
 
-
 import './Gallery.scss';
-import housePhoto1 from '../../assets/images/housePhoto1.jpg';
-import housePhoto2 from '../../assets/images/housePhoto2.jpg';
-import housePhoto3 from '../../assets/images/housePhoto3.jpg';
-import housePhoto4 from '../../assets/images/housePhoto4.jpg';
-import housePhoto5 from '../../assets/images/housePhoto5.jpg';
-import housePhoto6 from '../../assets/images/housePhoto6.jpg';
-import housePhoto7 from '../../assets/images/housePhoto7.jpg';
-import housePhoto8 from '../../assets/images/housePhoto8.jpg';
-import housePhoto9 from '../../assets/images/housePhoto9.jpg';
-
-const images = [
-  housePhoto1,
-  housePhoto2,
-  housePhoto3,
-  housePhoto4,
-  housePhoto5,
-  housePhoto6,
-  housePhoto7,
-  housePhoto8,
-  housePhoto9,
-];
 
 
 const options = {
@@ -75,7 +53,7 @@ export const Gallery: FC = (props) => {
       }
   `);
 
-  const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(images.length);
+  const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(allContentfulZdjecieDoGalerii.edges.length);
   const [areImagesVisible, setAreImagesVisible] = useState<boolean>(false);
 
   const checkInLoaded = (): void => {

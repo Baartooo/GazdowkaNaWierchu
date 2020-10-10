@@ -13,3 +13,5 @@ export const PageHeader: FC<IPageHeader> = (props) => {
     <h1 className={'page-header'}>{content}</h1>
   );
 };
+
+export default React.memo(PageHeader)
