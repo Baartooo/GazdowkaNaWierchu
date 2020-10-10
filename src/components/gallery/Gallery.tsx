@@ -1,4 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 import { PageHeader } from '../pageHeader/PageHeader';
 import SimpleReactLightbox from 'simple-react-lightbox';
@@ -51,6 +53,28 @@ const options = {
 };
 
 export const Gallery: FC = (props) => {
+
+  const { allContentfulZdjecieDoGalerii } = useStaticQuery(
+    graphql`
+      query MyQuery {
+        allContentfulZdjecieDoGalerii {
+          edges {
+            node {
+              photo {
+                fluid(quality: 100) {
+                  srcSet
+                  src
+                  aspectRatio
+                  sizes
+                  base64
+                }
+              }
+            }
+          }
+        }
+      }
+  `);
+
   const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(images.length);
   const [areImagesVisible, setAreImagesVisible] = useState<boolean>(false);
 
@@ -63,6 +87,7 @@ export const Gallery: FC = (props) => {
       setAreImagesVisible(true);
     }
   }, [imagesToBeLoaded]);
+
 
   return (
     <div className={'gallery'}>
@@ -83,13 +108,17 @@ export const Gallery: FC = (props) => {
             <SRLWrapper options={options}>
               <div className={'gallery__images-wrapper'}>
 
-                {images.map((image, index) => {
+                {allContentfulZdjecieDoGalerii.edges.map((image, index) => {
+                  const src = image.node.photo.fluid.src;
+                  const fluid = image.node.photo.fluid;
+
                   return (
                     <a className={`gallery__image-wrapper ${areImagesVisible ? 'visible' : ''}`}
-                       href={image}
+                       href={src}
                        data-attribute={'SRL'} key={index}>
 
-                      <img className={'gallery__image'} src={image} onLoad={checkInLoaded} />
+                      {/*<img className={'gallery__image'} src={src} onLoad={checkInLoaded} />*/}
+                      <Img className={'gallery__image'} fluid={fluid} onLoad={checkInLoaded} />
 
                     </a>
                   );
@@ -99,10 +128,13 @@ export const Gallery: FC = (props) => {
           </SimpleReactLightbox>
         </div>
 
-
       </section>
-
 
     </div>
   );
 };
+
+
+
+
+
