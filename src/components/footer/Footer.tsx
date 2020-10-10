@@ -7,7 +7,13 @@ import Pin from '../../assets/svg/pin.svg';
 import Info from '../../assets/svg/info.svg';
 import './Footer.scss';
 
-const Footer: FC = (props) => {
+interface IFooter {
+  isFixed: boolean;
+}
+
+const Footer: FC<IFooter> = (props) => {
+
+  const { isFixed } = props;
 
   const {
     facebookName,
@@ -22,7 +28,7 @@ const Footer: FC = (props) => {
   } = info;
 
   return (
-    <footer className={'footer'}>
+    <footer className={`footer ${isFixed ? 'fixed' : ''}`}>
 
       <div className={'footer__item-wrapper'}>
         <a href={facebookLink} className={'footer__link'} target={'_blank'}>

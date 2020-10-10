@@ -1,7 +1,8 @@
 @import "../../styles/config";
 
 .footer {
-  position: fixed;
+  position: relative;
+  z-index: 100;
 
   bottom: 0;
 
@@ -14,13 +15,19 @@
   align-items: center;
 
   width: 100vw;
-  min-height: 100px;
+  height: $footer-height-mobile;
 
   background-color: $color-menu;
 
   @media (min-width: $min-desktop) {
     flex-direction: row;
     padding: 0;
+
+    height: $footer-height-desktop;
+  }
+
+  &.fixed {
+    position: fixed;
   }
 }
 
