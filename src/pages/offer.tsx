@@ -8,7 +8,7 @@ const OfferPage: FC = (props) => {
   return (
     <>
       <Offer />
-      <Footer isFixed={true} />
+      <Footer isFixed={false} />
     </>
   );
 };
