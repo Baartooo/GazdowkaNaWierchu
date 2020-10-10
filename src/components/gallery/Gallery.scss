@@ -23,7 +23,7 @@ $wholePage: 100vh;
   }
 
   &::after {
-    position: absolute;
+    position: fixed;
     top: 200px;
 
     content: '';
