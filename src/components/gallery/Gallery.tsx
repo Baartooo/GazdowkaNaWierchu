@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import Img from 'gatsby-image/withIEPolyfill';
 
 import StripeContainer from '../stripeContainer/StripeContainer';
 import PageHeader from '../pageHeader/PageHeader';
@@ -96,8 +96,14 @@ export const Gallery: FC = (props) => {
                        href={src}
                        data-attribute={'SRL'} key={index}>
 
-                      {/*<img className={'gallery__image'} src={src} onLoad={checkInLoaded} />*/}
-                      <Img className={'gallery__image'} fluid={fluid} onLoad={checkInLoaded} />
+                      <Img
+                        className={'gallery__image'}
+                        fluid={fluid}
+                        onLoad={checkInLoaded}
+                        draggable={false}
+                        objectFit="cover"
+                        objectPosition="50% 50%"
+                      />
 
                     </a>
                   );
