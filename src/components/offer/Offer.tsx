@@ -5,10 +5,11 @@ import PageHeader from '../pageHeader/PageHeader';
 import Segment from './offerSegment/OfferSegment';
 import Loader from 'react-loader-spinner';
 
+import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
 
 export const Offer: FC = (props) => {
-  const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(3);
+  const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(1);
   const [areImagesVisible, setAreImagesVisible] = useState<boolean>(false);
 
   const checkInLoaded = (): void => {
@@ -24,7 +25,10 @@ export const Offer: FC = (props) => {
   return (
     <StripeContainer>
       <section className={'offer'}>
-        <PageHeader content={'Nasza oferta'} />
+        <div className={`offer__hero ${areImagesVisible ? 'visible' : ''}`}>
+          <img className={'offer__hero-image'} src={heroImg} onLoad={checkInLoaded} />
+          <PageHeader content={'Nasza oferta'} color={'white'} />
+        </div>
 
         <Loader
           visible={!areImagesVisible}
@@ -37,11 +41,6 @@ export const Offer: FC = (props) => {
 
         <div className={`offer__segments ${areImagesVisible ? 'visible' : ''}`}>
 
-          <Segment isPhotoOnLeft={true} onPhotoLoad={checkInLoaded} />
-          <div className={'offer__separator'} />
-          <Segment isPhotoOnLeft={false} onPhotoLoad={checkInLoaded} />
-          <div className={'offer__separator'} />
-          <Segment isPhotoOnLeft={true} onPhotoLoad={checkInLoaded} />
         </div>
 
       </section>

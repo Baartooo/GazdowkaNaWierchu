@@ -4,14 +4,15 @@ import './PageHeader.scss';
 
 interface IPageHeader {
   content: string;
+  color: string;
 }
 
 export const PageHeader: FC<IPageHeader> = (props) => {
-  const { content } = props;
+  const { content, color } = props;
 
   return (
-    <h1 className={'page-header'}>{content}</h1>
+    <h1 style={{ color }} className={'page-header'}>{content}</h1>
   );
 };
 
-export default React.memo(PageHeader)
+export default React.memo(PageHeader);
