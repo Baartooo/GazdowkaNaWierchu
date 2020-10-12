@@ -7,6 +7,7 @@ import Loader from 'react-loader-spinner';
 
 import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
+import OfferNavigation from './navigation/OfferNavigation';
 
 export const Offer: FC = (props) => {
   const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(1);
@@ -29,6 +30,8 @@ export const Offer: FC = (props) => {
           <img className={'offer__hero-image'} src={heroImg} onLoad={checkInLoaded} />
           <PageHeader content={'Nasza oferta'} color={'white'} />
         </div>
+
+        <OfferNavigation />
 
         <Loader
           visible={!areImagesVisible}

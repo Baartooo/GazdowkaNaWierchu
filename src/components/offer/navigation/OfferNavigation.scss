@@ -1,0 +1,43 @@
+@import "../../../styles/config";
+
+.offer-navigation {
+  display: flex;
+
+  margin-top: 20px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-navigation__separator {
+  height: 50px;
+
+  border-left: 1px solid black;
+
+  margin: 0 10px;
+}
+
+.offer-navigation__item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 10px;
+  padding: 10px 20px;
+
+  border: 2px solid $color-black;
+
+  font-weight: 500;
+
+  background-color: $color-white;
+
+  cursor: pointer;
+  transition: $transition-leave;
+
+  &:hover {
+    background-color: $color-menu;
+    color: white;
+    transition: $transition-enter;
+  }
+}
