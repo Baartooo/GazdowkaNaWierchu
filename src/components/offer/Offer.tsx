@@ -8,6 +8,7 @@ import Loader from 'react-loader-spinner';
 import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
 import OfferNavigation from './navigation/OfferNavigation';
+import HeroHeader from '../heroHeader/HeroHeader';
 
 export const Offer: FC = (props) => {
   const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(1);
@@ -26,12 +27,14 @@ export const Offer: FC = (props) => {
   return (
     <StripeContainer>
       <section className={'offer'}>
-        <div className={`offer__hero ${areImagesVisible ? 'visible' : ''}`}>
-          <img className={'offer__hero-image'} src={heroImg} onLoad={checkInLoaded} />
-          <PageHeader content={'Nasza oferta'} color={'white'} />
-        </div>
 
-        <OfferNavigation />
+        <HeroHeader
+          imageSrc={heroImg}
+          objectPosition={{ x: '50%', y: '45%' }}
+          title={'Nasza oferta'}
+          isVisible={areImagesVisible}
+          checkInLoaded={checkInLoaded}
+        />
 
         <Loader
           visible={!areImagesVisible}
@@ -43,6 +46,7 @@ export const Offer: FC = (props) => {
         />
 
         <div className={`offer__segments ${areImagesVisible ? 'visible' : ''}`}>
+          <OfferNavigation />
 
         </div>
 

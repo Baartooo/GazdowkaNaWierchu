@@ -2,12 +2,13 @@ import React, { FC, useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image/withIEPolyfill';
 
-import StripeContainer from '../stripeContainer/StripeContainer';
-import PageHeader from '../pageHeader/PageHeader';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import { SRLWrapper } from 'simple-react-lightbox';
 import Loader from 'react-loader-spinner';
+import StripeContainer from '../stripeContainer/StripeContainer';
+import HeroHeader from '../heroHeader/HeroHeader';
 
+import heroImg from '../../assets/images/galleryHeroImage.jpg';
 import './Gallery.scss';
 
 
@@ -54,7 +55,10 @@ export const Gallery: FC = (props) => {
       }
   `);
 
-  const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(allContentfulZdjecieDoGalerii.edges.length);
+  const [
+    imagesToBeLoaded,
+    setImagesToBeLoaded,
+  ] = useState<number>(allContentfulZdjecieDoGalerii.edges.length + 1); //+1 because of hero image
   const [areImagesVisible, setAreImagesVisible] = useState<boolean>(false);
 
   const checkInLoaded = (): void => {
@@ -67,11 +71,16 @@ export const Gallery: FC = (props) => {
     }
   }, [imagesToBeLoaded]);
 
-
   return (
     <StripeContainer>
       <section className={'gallery'}>
-        <PageHeader content={'Galeria'} />
+        <HeroHeader
+          imageSrc={heroImg}
+          objectPosition={{ x: '50%', y: '30%' }}
+          title={'Galeria'}
+          isVisible={areImagesVisible}
+          checkInLoaded={checkInLoaded}
+        />
 
         <div className={'gallery__images'}>
           <Loader

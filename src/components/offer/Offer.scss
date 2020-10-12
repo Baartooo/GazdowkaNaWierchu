@@ -12,51 +12,6 @@
   align-items: center;
 }
 
-.offer__hero {
-  position: relative;
-
-  display: flex;
-
-  width: 100vw;
-  height: 100px;
-
-  justify-content: center;
-  align-items: center;
-
-  overflow: hidden;
-  opacity: 0;
-
-  background-color: $color-black;
-  box-shadow: $box-shadow;
-
-  @media (min-width: $min-mobile) {
-    height: 150px;
-  }
-
-  @media (min-width: $min-tablet) {
-    height: 200px;
-  }
-
-  @media (min-width: $min-desktop) {
-    height: 250px;
-  }
-
-  &.visible {
-    opacity: 1;
-    transition: $transition-enter;
-  }
-}
-
-.offer__hero-image {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: 50% 45%;
-
-  opacity: .7;
-}
-
 .offer__segments {
   display: flex;
 
