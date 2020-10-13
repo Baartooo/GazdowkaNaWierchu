@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 
+import { gsap, ScrollToPlugin } from 'gsap/all';
 import StripeContainer from '../stripeContainer/StripeContainer';
 import Loader from 'react-loader-spinner';
 import OfferNavigation from './navigation/OfferNavigation';
@@ -10,11 +11,25 @@ import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
 
 export const Offer: FC = (props) => {
-  const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(1);
+  const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(3);
   const [areImagesVisible, setAreImagesVisible] = useState<boolean>(false);
+
+  gsap.registerPlugin(ScrollToPlugin);
+
 
   const checkInLoaded = (): void => {
     setImagesToBeLoaded(imagesToBeLoaded => imagesToBeLoaded - 1);
+  };
+
+  const scrollToConstant = () => {
+    gsap.to(window, {
+      scrollTo: '#constant',
+      duration: 1,
+    });
+  };
+
+  const scrollToSeasonal = () => {
+
   };
 
   useEffect(() => {
@@ -45,9 +60,12 @@ export const Offer: FC = (props) => {
         />
 
         <div className={`offer__segments ${areImagesVisible ? 'visible' : ''}`}>
-          <OfferNavigation />
+          <OfferNavigation
+            handleConstantClick={scrollToConstant}
+            handleSeasonalClick={scrollToSeasonal}
+          />
 
-          <ConstantOffer onPhotoLoad={checkInLoaded}/>
+          <ConstantOffer onPhotoLoad={checkInLoaded} />
 
 
         </div>

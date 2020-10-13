@@ -13,6 +13,20 @@
     flex-direction: row;
     align-items: flex-start;
   }
+
+  &.photo-left {
+    @media (min-width: $min-tablet) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &.photo-right {
+    @media (min-width: $min-tablet) {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+    }
+  }
 }
 
 .segment__item {

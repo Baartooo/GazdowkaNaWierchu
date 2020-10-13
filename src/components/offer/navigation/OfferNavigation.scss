@@ -4,14 +4,12 @@
   display: flex;
 
   margin-top: 20px;
-  margin-bottom: 100px;
 
   justify-content: center;
   align-items: center;
 
   @media (min-width: $min-tablet) {
-    margin-bottom: 200px;
-
+    margin-bottom: 100px;
   }
 }
 
@@ -41,7 +39,7 @@
 
   cursor: pointer;
   transition: $transition-leave;
-
+  white-space: nowrap;
   &:hover {
     background-color: $color-menu;
     color: white;
