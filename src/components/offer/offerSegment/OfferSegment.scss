@@ -5,7 +5,14 @@
 
   width: 100%;
 
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  @media (min-width: $min-tablet) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .segment__item {
@@ -13,10 +20,16 @@
 
   margin: 1% 1%;
 
-  width: 40%;
-  height: 30vw;
+  width: 60%;
 
-  border: 1px solid $color-black;
+  &.description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: $min-tablet) {
+    width: 40%;
+  }
 }
 
 .segment__photo {
@@ -24,4 +37,24 @@
 
   object-fit: cover;
   object-position: 50% 50%;
+}
+
+.segment__title {
+  @include rf(15, 40);
+
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  text-decoration: underline;
+  white-space: nowrap;
+
+  @media (min-width: $min-tablet) {
+    margin-top: 30px;
+  }
+}
+
+.segment__price {
+  @include rf(15, 30);
+
+  font-weight: 500;
 }

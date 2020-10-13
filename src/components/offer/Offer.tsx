@@ -1,14 +1,13 @@
 import React, { FC, useEffect, useState } from 'react';
 
 import StripeContainer from '../stripeContainer/StripeContainer';
-import PageHeader from '../pageHeader/PageHeader';
-import Segment from './offerSegment/OfferSegment';
 import Loader from 'react-loader-spinner';
+import OfferNavigation from './navigation/OfferNavigation';
+import HeroHeader from '../heroHeader/HeroHeader';
+import ConstantOffer from './constantOffer/ConstantOffer';
 
 import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
-import OfferNavigation from './navigation/OfferNavigation';
-import HeroHeader from '../heroHeader/HeroHeader';
 
 export const Offer: FC = (props) => {
   const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(1);
@@ -47,6 +46,9 @@ export const Offer: FC = (props) => {
 
         <div className={`offer__segments ${areImagesVisible ? 'visible' : ''}`}>
           <OfferNavigation />
+
+          <ConstantOffer onPhotoLoad={checkInLoaded}/>
+
 
         </div>
 

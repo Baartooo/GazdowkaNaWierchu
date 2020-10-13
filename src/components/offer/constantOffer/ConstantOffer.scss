@@ -1,0 +1,29 @@
+@import "../../../styles/config";
+
+.constant {
+  display: flex;
+
+  width: 100vw;
+
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.constant__header {
+  @include rf(20, 50);
+
+  margin-bottom: 20px;
+
+  color: $color-black;
+  font-weight: 500;
+}
+
+.constant__separator {
+  width: 80vw;
+
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  border-top: 1px solid rgba(0, 0, 0, .4);
+}

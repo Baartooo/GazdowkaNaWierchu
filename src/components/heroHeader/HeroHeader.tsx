@@ -35,7 +35,7 @@ const HeroHeader: FC<IHeroHeader> = (props) => {
         }} className={'hero__image'}
         src={imageSrc}
         onLoad={checkInLoaded} />
-      <PageHeader content={title} color={'white'} />
+      <PageHeader content={title} />
     </div>
   );
 };
