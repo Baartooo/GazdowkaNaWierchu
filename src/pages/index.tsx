@@ -15,8 +15,10 @@ class RootIndex extends React.Component {
           alignItems: 'center',
           height: '100vh',
           width: '100vw',
+          textAlign: 'center',
         }}>
-          <span>Gazdówka na Wierchu - zapraszamy wkrótce</span>
+          <span>Gazdówka na Wierchu - strona w budowie <br /> <a
+            href={'https://www.facebook.com/Gazd%C3%B3wka-na-Wierchu-114668290408693'}>Zapraszamy na nasz Facebook</a></span>
         </div>
       </Layout>
     )
@@ -25,55 +27,3 @@ class RootIndex extends React.Component {
 
 export default RootIndex
 
-export const pageQuery = graphql`
-  query HomeQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  }
-`
