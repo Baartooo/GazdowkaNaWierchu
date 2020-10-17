@@ -6,6 +6,7 @@ import Loader from 'react-loader-spinner';
 import OfferNavigation from './navigation/OfferNavigation';
 import HeroHeader from '../heroHeader/HeroHeader';
 import ConstantOffer from './constantOffer/ConstantOffer';
+import SeasonalOffer from './seasonalOffer/SeasonalOffer';
 
 import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
@@ -29,7 +30,10 @@ export const Offer: FC = (props) => {
   };
 
   const scrollToSeasonal = () => {
-
+    gsap.to(window, {
+      scrollTo: '#seasonal',
+      duration: 1,
+    });
   };
 
   useEffect(() => {
@@ -66,6 +70,7 @@ export const Offer: FC = (props) => {
           />
 
           <ConstantOffer onPhotoLoad={checkInLoaded} />
+          <SeasonalOffer />
 
 
         </div>
