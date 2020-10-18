@@ -51,6 +51,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
+*::selection {
+  background: $color-active-link;
+}
 
 body {
   @include responsive-font($font-size-min, $font-size);

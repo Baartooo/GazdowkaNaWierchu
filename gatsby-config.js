@@ -35,6 +35,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     `gatsby-plugin-sass`,
     'gatsby-plugin-svgr',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,

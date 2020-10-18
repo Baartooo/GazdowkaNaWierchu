@@ -14,4 +14,4 @@ export const PageHeader: FC<IPageHeader> = (props) => {
   );
 };
 
-export default React.memo(PageHeader)
+export default React.memo(PageHeader);
