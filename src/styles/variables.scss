@@ -36,6 +36,8 @@ $color-white: #ffffff;
 $color-black: #000;
 $color-active-link: #ca842e;
 $color-menu: #343434;
+$linear-gradient-cta: linear-gradient(30deg, $color-white, $color-active-link 150%);
+$linear-gradient-cta-hover: linear-gradient(30deg, $color-menu, $color-active-link 175%);
 
 // Timings
 $transition-enter: 200ms;

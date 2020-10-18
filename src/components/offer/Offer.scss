@@ -37,6 +37,14 @@
   top: 30%;
 }
 
+.offer__common {
+  @include rf(12, 30);
+  text-align: center;
+  line-height: 180%;
+
+  font-weight: $font-weight-bold;
+}
+
 .offer__separator {
   width: 50%;
   border-top: 2px solid rgba(0, 0, 0, .4);

@@ -5,12 +5,22 @@ import './OfferSegment.scss';
 interface ISegment {
   isPhotoOnLeft: boolean;
   imgSrc: string;
+  title: string;
+  price: number;
+  kids: string;
 
   onPhotoLoad(): void;
 }
 
 const Segment: FC<ISegment> = (props) => {
-  const { isPhotoOnLeft, onPhotoLoad, imgSrc } = props;
+  const {
+    isPhotoOnLeft,
+    onPhotoLoad,
+    imgSrc,
+    title,
+    price,
+    kids,
+  } = props;
 
   return (
     <div className={`segment ${isPhotoOnLeft ? 'photo-left' : 'photo-right'}`}>
@@ -20,9 +30,9 @@ const Segment: FC<ISegment> = (props) => {
       </div>
 
       <div className={'segment__item description'}>
-        <h3 className={'segment__title'}>Nocleg + śniadanie/os/doba</h3>
-        <span className={'segment__price'}>Od 80zł</span>
-        <span className={'segment__price'}>Dzieci w wieku 4-7 lat:  60zł</span>
+        <h3 className={'segment__title'}>{title}</h3>
+        <span className={'segment__price'}>Od {price}zł</span>
+        <span className={'segment__price'}>{kids}</span>
       </div>
 
     </div>

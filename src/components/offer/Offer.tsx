@@ -69,6 +69,15 @@ export const Offer: FC = (props) => {
             handleSeasonalClick={scrollToSeasonal}
           />
 
+          <div className={'offer__common'}>
+            Cena jest uzależniona od sezonu i długości pobytu.<br />
+            Cena za pobyt zawiera opłatę klimatyczną.<br />
+            Dzieci poniżej 3 lat nieodpłatnie.<br /><br/>
+            Śniadania wydawane są w godzinach 8.00-10.00.<br />
+            Obiadokolacja 17.00-19.00.<br />
+
+          </div>
+
           <ConstantOffer onPhotoLoad={checkInLoaded} />
           <SeasonalOffer />
 
