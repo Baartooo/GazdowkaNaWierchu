@@ -54,20 +54,11 @@
 .seasonal__download-title {
   @include rf(14, 25);
 
-  margin-top: 50px;
+  margin: 50px 0 10px;
+
 }
 
-.seasonal__donwload-button {
-  display: flex;
-
-  margin-top: 20px;
-  padding: 10px 20px;
-
-  justify-content: center;
-  align-items: center;
-
-  border: 2px solid black;
-  border-radius: 25px;
-
-  background: white;
+.seasonall__download-link {
+  text-decoration: none
+;
 }

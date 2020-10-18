@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 
 import './SeasonalOffer.scss';
+import CTAButton from '../../ctaButton/CTAButton';
 
 const SeasonalOffer: FC = (props) => {
 
@@ -20,9 +21,13 @@ const SeasonalOffer: FC = (props) => {
         </ul>
 
         <span className={'seasonal__download-title'}>Pobierz aktualną ofertę sezonową</span>
-        <div className={'seasonal__donwload-button'}>
-          Oferta sezonowa
-        </div>
+
+        <a href={'#'} className={'seasonall__download-link'}>
+          <CTAButton>
+            Oferta sezonowa
+          </CTAButton>
+        </a>
+
       </div>
 
     </div>

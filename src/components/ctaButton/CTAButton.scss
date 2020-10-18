@@ -1,0 +1,26 @@
+@import "../../styles/config";
+
+.cta-button {
+  display: flex;
+
+  padding: 10px 20px;
+
+  justify-content: center;
+  align-items: center;
+
+  color: $color-black;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 25px;
+  background: linear-gradient(30deg, $color-white, $color-active-link 150%);
+
+  transition: $transition-leave;
+
+  user-select: none;
+
+  &:hover {
+    background: linear-gradient(30deg, $color-black, $color-active-link 175%);
+    color: $color-white;
+    transition: $transition-enter;
+  }
+}
