@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const path = require('path');
+
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -34,8 +36,8 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     `gatsby-plugin-sass`,
-    'gatsby-plugin-svgr',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-svg',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
