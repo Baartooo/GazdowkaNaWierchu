@@ -2,10 +2,14 @@ import React, { FC } from 'react';
 
 import './StripeContainer.scss';
 
-const StripeContainer: FC = (props) => {
-  const { children } = props;
+interface IStripeContainer {
+  isLight?: boolean;
+}
+
+const StripeContainer: FC<IStripeContainer> = (props) => {
+  const { children, isLight } = props;
   return (
-    <div className={'stripe-container'}>
+    <div className={`stripe-container ${isLight ? 'stripe-container--light' : ''}`}>
       {children}
     </div>
   );
