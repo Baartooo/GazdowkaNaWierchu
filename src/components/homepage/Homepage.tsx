@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 
-import House from '../../assets/images/house-main-photo.jpg';
+import House from '../../assets/images/background.jpg';
 import './Homepage.scss';
 
 const Homepage: FC = (props) => {
