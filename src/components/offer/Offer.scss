@@ -37,12 +37,26 @@
   top: 30%;
 }
 
-.offer__common {
+.offer__common,
+.offer__terms {
   @include rf(12, 30);
   text-align: center;
   line-height: 180%;
 
   font-weight: $font-weight-bold;
+}
+
+.offer__terms {
+  margin-top: 30px;
+
+  @media (min-width: $min-tablet) {
+    margin-top: 50px;
+  }
+}
+
+.offer__terms-link {
+  text-decoration: none;
+  color: $color-black;
 }
 
 .offer__separator {

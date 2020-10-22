@@ -10,6 +10,7 @@ import SeasonalOffer from './seasonalOffer/SeasonalOffer';
 
 import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
+import CTAButton from '../ctaButton/CTAButton';
 
 export const Offer: FC = (props) => {
   const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(3);
@@ -72,16 +73,18 @@ export const Offer: FC = (props) => {
           <div className={'offer__common'}>
             Cena jest uzależniona od sezonu i długości pobytu.<br />
             Cena za pobyt zawiera opłatę klimatyczną.<br />
-            Dzieci poniżej 3 lat nieodpłatnie.<br /><br/>
+            Dzieci poniżej 3 lat nieodpłatnie.<br /><br />
             Śniadania wydawane są w godzinach 8.00-10.00.<br />
             Obiadokolacja 17.00-19.00.<br />
-
           </div>
+
+          <p className={'offer__terms'}>Pobierz regulamin obiektu</p>
+          <a href={'#'} className={'offer__terms-link'}>
+            <CTAButton>Regulamin</CTAButton>
+          </a>
 
           <ConstantOffer onPhotoLoad={checkInLoaded} />
           <SeasonalOffer />
-
-
         </div>
 
       </section>
