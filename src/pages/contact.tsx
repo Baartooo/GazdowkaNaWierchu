@@ -6,7 +6,7 @@ const ContactPage: FC = (props) => {
   return (
     <>
       <Contact />
-      <Footer isFixed={true} />
+      <Footer isFixed={false} />
     </>
   );
 };
