@@ -32,7 +32,7 @@ const Footer: FC<IFooter> = (props) => {
 
       <div className={'footer__item-wrapper'}>
         <a href={facebookLink} className={'footer__link'} target={'_blank'}>
-          <img src={Facebook} className={'footer__icon'} />
+          <Facebook className={'footer__icon'} />
           <div className={'footer__info'}>
             {facebookName}
           </div>
@@ -41,7 +41,7 @@ const Footer: FC<IFooter> = (props) => {
 
       <div className={'footer__item-wrapper'}>
         <a href={`mailto:${mail}`} className={'footer__link'}>
-          <img src={Mail} className={'footer__icon'} />
+          <Mail className={'footer__icon'} />
           <div className={'footer__info'}>
             {mail}
           </div>
@@ -50,7 +50,7 @@ const Footer: FC<IFooter> = (props) => {
 
       <div className={'footer__item-wrapper'}>
         <a href={addressLink} className={'footer__link'} target={'_blank'}>
-          <img src={Pin} className={'footer__icon'} />
+          <Pin className={'footer__icon'} />
           <div className={'footer__info footer__info--smaller'}>
             {addressFirstLine} <br />
             {addressSecondLine}
@@ -60,7 +60,7 @@ const Footer: FC<IFooter> = (props) => {
 
       <div className={'footer__item-wrapper'}>
         <a href={'#'} className={'footer__link'}>
-          <img src={Info} className={'footer__icon'} />
+          <Info className={'footer__icon'} />
           <div className={'footer__info footer__info--smaller'}>
             {companyInfoFirstLine}<br />
             {companyInfoSecondLine}<br />

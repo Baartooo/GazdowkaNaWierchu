@@ -37,13 +37,13 @@ export const Navbar: FC = () => {
 
       <div className={'navbar__phone-wrapper'}>
         <a href={`tel:${info.phoneNumber}`} className={'navbar__phone-link'}>
-          <img src={Phone} className={'navbar__phone'} />
+          <Phone className={'navbar__phone'} />
           <span className={'navbar__phone-number'}>{info.phoneNumber}</span>
         </a>
       </div>
 
 
-      <img src={HamburgerMenu} className={'navbar__toggle-button'} onClick={toggleNavigation} />
+      <HamburgerMenu className={'navbar__toggle-button'} onClick={toggleNavigation} />
 
     </header>
   );

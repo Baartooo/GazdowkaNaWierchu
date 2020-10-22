@@ -8,16 +8,18 @@
 }
 
 .homepage__background {
+  margin-top: $navbar-height;
+
   width: 100vw;
   height: 100%;
 
   opacity: 0;
 
   object-fit: cover;
-  object-position: 50% 65%;
+  object-position: 100% 0;
 
   @media (min-width: $min-desktop) {
-    object-position: 50% 47%;
+    object-position: 100% 0;
   }
 
   &.loaded {
