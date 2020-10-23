@@ -62,31 +62,31 @@ const Contact: FC = (props) => {
 
         <div className={`contact__content ${areImagesVisible ? 'visible' : ''}`}>
           <div className={'contact__info'}>
-            <div className={'contact__segment'}>
+            <a href={addressLink} className={'contact__segment'} target={'_blank'}>
               <Pin className={'contact__icon'} />
               <p className={'contact__data'}>
                 {addressFirstLine} <br />
                 {addressSecondLine}
               </p>
-            </div>
-            <div className={'contact__segment'}>
+            </a>
+            <a href={`tel:${phoneNumber}`} className={'contact__segment'}>
               <Phone className={'contact__icon'} />
               <p className={'contact__data'}>
                 {phoneNumber}
               </p>
-            </div>
-            <div className={'contact__segment'}>
+            </a>
+            <a href={facebookLink} className={'contact__segment'} target={'_blank'}>
               <Facebook className={'contact__icon'} />
               <p className={'contact__data'}>
                 {facebookName}
               </p>
-            </div>
-            <div className={'contact__segment'}>
+            </a>
+            <a href={`mailto:${mail}`} className={'contact__segment'} target={'_blank'}>
               <Mail className={'contact__icon'} />
               <p className={'contact__data'}>
                 {mail}
               </p>
-            </div>
+            </a>
             <div className={'contact__segment'}>
               <Info className={'contact__icon'} />
               <p className={'contact__data'}>
