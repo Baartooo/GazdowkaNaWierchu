@@ -8,6 +8,7 @@ import HeroHeader from '../heroHeader/HeroHeader';
 import ConstantOffer from './constantOffer/ConstantOffer';
 import SeasonalOffer from './seasonalOffer/SeasonalOffer';
 
+import terms from '../../../static/regulamin.pdf';
 import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
 import CTAButton from '../ctaButton/CTAButton';
@@ -79,7 +80,7 @@ export const Offer: FC = (props) => {
           </div>
 
           <p className={'offer__terms'}>Pobierz regulamin obiektu</p>
-          <a href={'#'} className={'offer__terms-link'}>
+          <a className={'offer__terms-link'} href={terms} download={terms} target={'_blank'}>
             <CTAButton>Regulamin</CTAButton>
           </a>
 
