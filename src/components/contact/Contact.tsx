@@ -5,6 +5,7 @@ import StripeContainer from '../stripeContainer/StripeContainer';
 
 import Loader from 'react-loader-spinner';
 
+import card from '../../assets/images/businessCard.jpg';
 import heroImg from '../../assets/images/contactHeroImg.jpg';
 import Facebook from '../../assets/svg/facebook.svg';
 import Phone from '../../assets/svg/phone-call.svg';
@@ -95,6 +96,9 @@ const Contact: FC = (props) => {
                 {companyInfoThirdLine}<br />
               </p>
             </div>
+          </div>
+          <div className={'contact__business-card'}>
+            <img src={card} className={'contact__card'}/>
           </div>
 
           <div className={'contact__map'}>
