@@ -1,11 +1,13 @@
 import React, { FC } from 'react';
 import info from '../../company-info/info.json';
+import { contact } from '../../utils/routes';
 
 import Facebook from '../../assets/svg/facebook.svg';
 import Mail from '../../assets/svg/mail.svg';
 import Pin from '../../assets/svg/pin.svg';
 import Info from '../../assets/svg/info.svg';
 import './Footer.scss';
+import { Link } from 'gatsby';
 
 interface IFooter {
   isFixed: boolean;
@@ -59,14 +61,14 @@ const Footer: FC<IFooter> = (props) => {
       </div>
 
       <div className={'footer__item-wrapper'}>
-        <a href={'#'} className={'footer__link'}>
+        <Link to={contact} className={'footer__link'}>
           <Info className={'footer__icon'} />
           <div className={'footer__info footer__info--smaller'}>
             {companyInfoFirstLine}<br />
             {companyInfoSecondLine}<br />
             {companyInfoThirdLine}<br />
           </div>
-        </a>
+        </Link>
       </div>
 
     </footer>
