@@ -5,6 +5,7 @@ import StripeContainer from '../stripeContainer/StripeContainer';
 
 import Loader from 'react-loader-spinner';
 
+import card from '../../assets/images/businessCard.jpg';
 import heroImg from '../../assets/images/contactHeroImg.jpg';
 import Facebook from '../../assets/svg/facebook.svg';
 import Phone from '../../assets/svg/phone-call.svg';
@@ -62,31 +63,31 @@ const Contact: FC = (props) => {
 
         <div className={`contact__content ${areImagesVisible ? 'visible' : ''}`}>
           <div className={'contact__info'}>
-            <div className={'contact__segment'}>
+            <a href={addressLink} className={'contact__segment'} target={'_blank'}>
               <Pin className={'contact__icon'} />
               <p className={'contact__data'}>
                 {addressFirstLine} <br />
                 {addressSecondLine}
               </p>
-            </div>
-            <div className={'contact__segment'}>
+            </a>
+            <a href={`tel:${phoneNumber}`} className={'contact__segment'}>
               <Phone className={'contact__icon'} />
               <p className={'contact__data'}>
                 {phoneNumber}
               </p>
-            </div>
-            <div className={'contact__segment'}>
+            </a>
+            <a href={facebookLink} className={'contact__segment'} target={'_blank'}>
               <Facebook className={'contact__icon'} />
               <p className={'contact__data'}>
                 {facebookName}
               </p>
-            </div>
-            <div className={'contact__segment'}>
+            </a>
+            <a href={`mailto:${mail}`} className={'contact__segment'} target={'_blank'}>
               <Mail className={'contact__icon'} />
               <p className={'contact__data'}>
                 {mail}
               </p>
-            </div>
+            </a>
             <div className={'contact__segment'}>
               <Info className={'contact__icon'} />
               <p className={'contact__data'}>
@@ -95,6 +96,9 @@ const Contact: FC = (props) => {
                 {companyInfoThirdLine}<br />
               </p>
             </div>
+          </div>
+          <div className={'contact__business-card'}>
+            <img src={card} className={'contact__card'}/>
           </div>
 
           <div className={'contact__map'}>
