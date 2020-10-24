@@ -15,7 +15,7 @@ const PageNotFound: FC = (props) => (
       </p>
 
       <Link className={'not-found__link'} to={home}>
-        <img className={'not-found__card'} src={card} />
+        <img className={'not-found__card'} src={card}/>
       </Link>
 
     </div>
