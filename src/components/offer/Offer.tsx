@@ -80,7 +80,7 @@ export const Offer: FC = (props) => {
           </div>
 
           <p className={'offer__terms'}>Pobierz regulamin obiektu</p>
-          <a className={'offer__terms-link'} href={terms} download={terms} target={'_blank'}>
+          <a className={'offer__terms-link'} href={terms} target={'_blank'}>
             <CTAButton>Regulamin</CTAButton>
           </a>
 

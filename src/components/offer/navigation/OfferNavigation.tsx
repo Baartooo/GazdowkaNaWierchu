@@ -16,9 +16,9 @@ const OfferNavigation: FC<IOfferNavigation> = (props) => {
       <div className={'offer-navigation__item'} onClick={handleConstantClick}>
         oferta stała
       </div>
-      {/*<div className={'offer-navigation__separator'}/>*/}
+
       <div className={'offer-navigation__item'} onClick={handleSeasonalClick}>
-        oferta sezonowa
+        oferta specjalna
       </div>
 
     </div>

@@ -12,16 +12,12 @@ $wholePage: 100vh;
   padding-bottom: 10px;
 
   width: 100vw;
-  min-height: calc(#{$wholePage} - #{$footer-height-mobile});
+  min-height: 100vh;
 
   justify-content: center;
   align-items: flex-start;
 
   animation: fadeInAnimation ease 1s;
-
-  @media (min-width: $min-desktop) {
-    min-height: calc(#{$wholePage} - #{$footer-height-desktop} - 20px);
-  }
 
   &::after {
     position: fixed;
