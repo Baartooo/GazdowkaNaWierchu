@@ -70,7 +70,13 @@ const Footer: FC<IFooter> = (props) => {
           </div>
         </Link>
       </div>
-
+      <span className={'footer__icons-author'}>
+        Icons made by
+        <a className={'footer__icons-link'} href="https://www.flaticon.com/authors/freepik" title="Freepik" target={'_blank'}>
+          &nbsp;Freepik&nbsp;
+        </a>
+        from
+        <a className={'footer__icons-link'} href="https://www.flaticon.com/" title="Flaticon" target={'_blank'}> &nbsp;www.flaticon.com&nbsp;</a></span>
     </footer>
   );
 };

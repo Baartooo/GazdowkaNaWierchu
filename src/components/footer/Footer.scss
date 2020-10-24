@@ -91,3 +91,17 @@
     font-size: 11px;
   }
 }
+
+.footer__icons-author {
+  @include rf(6, 10);
+
+  position: absolute;
+  bottom: 2px;
+
+  color: #8c8c8c;
+}
+
+.footer__icons-link {
+  color: #8c8c8c;
+  text-decoration: none;
+}

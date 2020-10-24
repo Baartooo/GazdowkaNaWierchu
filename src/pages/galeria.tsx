@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
+import { Helmet } from 'react-helmet';
 import { Gallery } from '../components/gallery/Gallery';
-import Footer from '../components/footer/Footer';
 
 
-const GalleryPage: FC = (props) => {
-  return (
-    <>
-      <Gallery />
-      <Footer isFixed={false} />
-    </>
-  );
-};
+const GalleryPage: FC = (props) => (
+  <>
+    <Helmet title={'Galeria'}/>
+    <Gallery />
+  </>
+);
+
 export default GalleryPage;

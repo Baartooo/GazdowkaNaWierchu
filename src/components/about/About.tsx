@@ -25,7 +25,7 @@ const About: FC = (props) => {
 
   return (
     <StripeContainer isLight={true}>
-      <div className={'about'}>
+      <section className={'about'}>
         <HeroHeader
           imageSrc={heroImg}
           objectPosition={{ x: '50%', y: '20%' }}
@@ -162,7 +162,7 @@ const About: FC = (props) => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </StripeContainer>
   );
 };

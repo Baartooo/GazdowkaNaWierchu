@@ -1,14 +1,12 @@
 import React, { FC } from 'react';
+import { Helmet } from 'react-helmet';
 import Contact from '../components/contact/Contact';
-import Footer from '../components/footer/Footer';
 
-const ContactPage: FC = (props) => {
-  return (
-    <>
-      <Contact />
-      <Footer isFixed={false} />
-    </>
-  );
-};
+const ContactPage: FC = (props) => (
+  <>
+    <Helmet title={'Kontakt'}/>
+    <Contact />
+  </>
+);
 
 export default ContactPage;

@@ -27,7 +27,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'Gazdówka na Wierchu',
+    siteUrl: 'https://www.gazdowkanawierchu.pl/',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -38,6 +39,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-svg',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
@@ -46,6 +48,23 @@ module.exports = {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/components/layout/Layout.tsx`),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-PCVSRDM',
+
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        //
+        // Defaults to null
+        defaultDataLayer: { platform: 'gatsby' },
       },
     },
   ],

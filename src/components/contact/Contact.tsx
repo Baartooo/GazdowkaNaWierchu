@@ -43,7 +43,7 @@ const Contact: FC = (props) => {
 
   return (
     <StripeContainer isLight={true}>
-      <div className={'contact'}>
+      <section className={'contact'}>
         <HeroHeader
           imageSrc={heroImg}
           objectPosition={{ x: '50%', y: '63%' }}
@@ -98,7 +98,12 @@ const Contact: FC = (props) => {
             </div>
           </div>
           <div className={'contact__business-card'}>
-            <img src={card} className={'contact__card'}/>
+            <img
+              src={card}
+              className={'contact__card'}
+              title={'Wizytówka - Gazdówka na Wierchu'}
+              alt={'Wizytówka - Gazdówka na Wierchu'}
+            />
           </div>
 
           <div className={'contact__map'}>
@@ -109,7 +114,7 @@ const Contact: FC = (props) => {
           </div>
 
         </div>
-      </div>
+      </section>
     </StripeContainer>
   );
 };

@@ -1,17 +1,17 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
-import House from '../../assets/images/background.jpg';
+import House from '../../assets/images/background2.jpg';
 import './Homepage.scss';
 
 const Homepage: FC = (props) => {
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState<boolean>(false);
 
   return (
-    <div className={'homepage'}>
+    <section className={'homepage'}>
       <img
         src={House}
-        title={'domek w górach'}
-        alt={'domek w górach'}
+        title={'Domek Gazdówka na Wierchu'}
+        alt={'Domek Gazdówka na Wierchu'}
         className={`homepage__background ${isBackgroundLoaded ? 'loaded' : ''}`}
         onLoad={() => setIsBackgroundLoaded(true)}
       />
@@ -21,7 +21,7 @@ const Homepage: FC = (props) => {
           Zapraszamy!
         </h1>
       </div>
-    </div>
+    </section>
   );
 };
 
