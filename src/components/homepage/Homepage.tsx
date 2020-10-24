@@ -7,7 +7,7 @@ const Homepage: FC = (props) => {
   const [isBackgroundLoaded, setIsBackgroundLoaded] = useState<boolean>(false);
 
   return (
-    <div className={'homepage'}>
+    <section className={'homepage'}>
       <img
         src={House}
         title={'domek w górach'}
@@ -21,7 +21,7 @@ const Homepage: FC = (props) => {
           Zapraszamy!
         </h1>
       </div>
-    </div>
+    </section>
   );
 };
 

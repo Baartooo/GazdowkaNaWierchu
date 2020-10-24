@@ -43,7 +43,7 @@ const Contact: FC = (props) => {
 
   return (
     <StripeContainer isLight={true}>
-      <div className={'contact'}>
+      <section className={'contact'}>
         <HeroHeader
           imageSrc={heroImg}
           objectPosition={{ x: '50%', y: '63%' }}
@@ -109,7 +109,7 @@ const Contact: FC = (props) => {
           </div>
 
         </div>
-      </div>
+      </section>
     </StripeContainer>
   );
 };
