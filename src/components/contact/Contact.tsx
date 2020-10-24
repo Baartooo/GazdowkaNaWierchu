@@ -98,7 +98,12 @@ const Contact: FC = (props) => {
             </div>
           </div>
           <div className={'contact__business-card'}>
-            <img src={card} className={'contact__card'}/>
+            <img
+              src={card}
+              className={'contact__card'}
+              title={'Wizytówka - Gazdówka na Wierchu'}
+              alt={'Wizytówka - Gazdówka na Wierchu'}
+            />
           </div>
 
           <div className={'contact__map'}>

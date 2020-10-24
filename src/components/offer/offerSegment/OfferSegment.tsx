@@ -26,7 +26,13 @@ const Segment: FC<ISegment> = (props) => {
     <div className={`segment ${isPhotoOnLeft ? 'photo-left' : 'photo-right'}`}>
 
       <div className={'segment__item'}>
-        <img className={'segment__photo'} src={imgSrc} onLoad={onPhotoLoad} />
+        <img
+          className={'segment__photo'}
+          src={imgSrc}
+          onLoad={onPhotoLoad}
+          title={'Pokój - Gazdówka na Wierchu'}
+          alt={'Pokój - Gazdówka na Wierchu'}
+        />
       </div>
 
       <div className={'segment__item description'}>

@@ -10,8 +10,8 @@ const Homepage: FC = (props) => {
     <section className={'homepage'}>
       <img
         src={House}
-        title={'domek w górach'}
-        alt={'domek w górach'}
+        title={'Domek Gazdówka na Wierchu'}
+        alt={'Domek Gazdówka na Wierchu'}
         className={`homepage__background ${isBackgroundLoaded ? 'loaded' : ''}`}
         onLoad={() => setIsBackgroundLoaded(true)}
       />

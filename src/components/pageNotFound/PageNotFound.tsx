@@ -11,11 +11,16 @@ const PageNotFound: FC = (props) => (
     <div className={'not-found'}>
       <p className={'not-found__text'}>
         Nie znaleziono strony.<br />
-        Zapraszamy na Stronę Główną
+        Zapraszamy na Stronę Główną.
       </p>
 
       <Link className={'not-found__link'} to={home}>
-        <img className={'not-found__card'} src={card}/>
+        <img
+          className={'not-found__card'}
+          src={card}
+          title={'Wizytówka - Gazdówka na Wierchu'}
+          alt={'Wizytówka - Gazdówka na Wierchu'}
+        />
       </Link>
 
     </div>

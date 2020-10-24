@@ -34,7 +34,10 @@ const HeroHeader: FC<IHeroHeader> = (props) => {
          ${objectPosition.y}`,
         }} className={'hero__image'}
         src={imageSrc}
-        onLoad={checkInLoaded} />
+        onLoad={checkInLoaded}
+        title={'Tatry'}
+        alt={'Tatry'}
+      />
       <PageHeader content={title} />
     </div>
   );
