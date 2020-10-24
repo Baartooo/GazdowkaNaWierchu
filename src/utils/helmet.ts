@@ -1,13 +1,11 @@
-import favicon from 'assets/images/favicon.png';
-import share from 'assets/images/share.png';
+import share from '../assets/images/businessCard.jpg';
 
-const title = 'Create Ueno App';
-const description = 'The easiest and fastest way to create new projects.';
+const title = 'Gazdówka na Wierchu';
+const description = 'Gazdówka na Wierchu - Biały Dunajec. Zapraszamy!';
 
 export const helmet = {
-  title,
-  titleTemplate: '%s - Ueno',
-  htmlAttributes: { lang: 'en' },
+  titleTemplate: '%s - Gazdówka na Wierchu',
+  htmlAttributes: { lang: 'pl' },
   meta: [
     { name: 'description', content: description },
     {
@@ -15,9 +13,7 @@ export const helmet = {
       content: 'width=device-width, initial-scale=1, user-scalable=no',
     },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
-    { name: 'msapplication-navbutton-color', content: '#000' },
-    { name: 'msapplication-TileColor', content: '#000' },
-    { name: 'theme-color', content: '#000' },
+    { name: 'theme-color', content: '#ca842e' },
 
     { property: 'og:title', content: title },
     { property: 'og:image', content: share },
@@ -32,5 +28,4 @@ export const helmet = {
     { name: 'twitter:creator', content: '@uenodotco' },
     { name: 'twitter:description', content: description },
   ],
-  link: [{ rel: 'icon', type: 'image/x-icon', href: favicon }],
 };

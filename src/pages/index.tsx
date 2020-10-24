@@ -4,6 +4,7 @@ import Homepage from '../components/homepage/Homepage';
 
 const RootIndex: FC = (props) => (
   <>
+    <Helmet title={'Witamy'}/>
     <Homepage />
   </>
 );
