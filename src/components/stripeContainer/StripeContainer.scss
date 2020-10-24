@@ -1,6 +1,6 @@
 @import "../../styles/config";
 
-$wholePage: 100vh;
+$whole-page-height: 100vh;
 
 .stripe-container,
 .stripe-container--light {
@@ -8,11 +8,11 @@ $wholePage: 100vh;
   display: flex;
   overflow: hidden;
 
-  padding-top: $navbar-height;
-  padding-bottom: 10px;
+  margin-top: $navbar-height;
 
   width: 100vw;
-  min-height: 100vh;
+  min-height: calc(#{$whole-page-height} - (#{$navbar-height} + #{$footer-height-mobile}));
+
 
   justify-content: center;
   align-items: flex-start;
@@ -44,6 +44,10 @@ $wholePage: 100vh;
 
       height: 400px;
     }
+  }
+
+  @media (min-width: $min-desktop) {
+    min-height: calc(#{$whole-page-height} - (#{$navbar-height} + #{$footer-height-desktop}));
   }
 }
 

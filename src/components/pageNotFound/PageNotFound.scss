@@ -1,0 +1,49 @@
+@import "../../styles/config";
+
+$whole-page-height: 100vh;
+
+.not-found {
+  position: relative;
+  z-index: 20;
+
+  display: flex;
+
+  width: 100%;
+  height: calc(#{$whole-page-height} - (#{$navbar-height} + #{$footer-height-mobile}));
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $min-desktop) {
+    height: calc(#{$whole-page-height} - (#{$navbar-height} + #{$footer-height-desktop}));
+  }
+}
+
+.not-found__text {
+  @include rf(20, 40);
+
+  text-align: center;
+}
+
+.not-found__link {
+  display: block;
+
+  margin-top: 30px;
+
+  width: 80%;
+
+  @media (min-width: $min-mobile) {
+    width: 50%;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 30%;
+
+  }
+}
+
+.not-found__card {
+  width: 100%;
+  height: auto;
+}
