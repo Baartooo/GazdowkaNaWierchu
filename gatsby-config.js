@@ -27,7 +27,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'Gazdówka na Wierchu',
+    siteUrl: 'https://www.gazdowkanawierchu.pl/',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [

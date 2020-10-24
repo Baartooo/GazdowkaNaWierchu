@@ -10,7 +10,7 @@ const RootIndex: FC = (props) => {
   return (
     <>
       <Homepage />
-      <Footer isFixed={true} />
+      <Footer isFixed={false} />
     </>
   );
 };
