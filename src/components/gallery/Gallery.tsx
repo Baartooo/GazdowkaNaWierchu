@@ -1,10 +1,9 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image/withIEPolyfill';
 
 import SimpleReactLightbox from 'simple-react-lightbox';
 import { SRLWrapper } from 'simple-react-lightbox';
-import Loader from 'react-loader-spinner';
 import StripeContainer from '../stripeContainer/StripeContainer';
 import HeroHeader from '../heroHeader/HeroHeader';
 
@@ -56,22 +55,6 @@ query MyQuery {
 }
   `);
 
-  const [
-    imagesToBeLoaded,
-    setImagesToBeLoaded,
-  ] = useState<number>(allContentfulZdjecieDoGalerii.edges.length + 1); //+1 because of hero image
-  const [areImagesVisible, setAreImagesVisible] = useState<boolean>(false);
-
-  const checkInLoaded = (): void => {
-    setImagesToBeLoaded(imagesToBeLoaded => imagesToBeLoaded - 1);
-  };
-
-  useEffect(() => {
-    if (imagesToBeLoaded === 0) {
-      setAreImagesVisible(true);
-    }
-  }, [imagesToBeLoaded]);
-
   return (
     <StripeContainer>
       <section className={'gallery'}>
@@ -79,20 +62,9 @@ query MyQuery {
           imageSrc={heroImg}
           objectPosition={{ x: '50%', y: '30%' }}
           title={'Galeria'}
-          isVisible={areImagesVisible}
-          checkInLoaded={checkInLoaded}
         />
 
         <div className={'gallery__images'}>
-          <Loader
-            visible={!areImagesVisible}
-            type={'TailSpin'}
-            color={'#343434'}
-            width={100}
-            height={100}
-            className={'gallery__loader'}
-          />
-
           <SimpleReactLightbox>
             <SRLWrapper options={options}>
               <div className={'gallery__images-wrapper'}>
@@ -102,14 +74,13 @@ query MyQuery {
                   const fluid = image.node.photo.fluid;
 
                   return (
-                    <a className={`gallery__image-wrapper ${areImagesVisible ? 'visible' : ''}`}
+                    <a className={`gallery__image-wrapper`}
                        href={src}
                        data-attribute={'SRL'} key={index}>
 
                       <Img
                         className={'gallery__image'}
                         fluid={fluid}
-                        onLoad={checkInLoaded}
                         draggable={false}
                         objectFit="cover"
                         objectPosition="50% 50%"

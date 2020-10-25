@@ -10,6 +10,8 @@
 
   flex-direction: column;
   align-items: center;
+
+  animation: fadeInAnimation ease 1s;
 }
 
 .offer__segments {
@@ -21,13 +23,6 @@
 
   flex-direction: column;
   align-items: center;
-
-  opacity: 0;
-
-  &.visible {
-    opacity: 1;
-    transition: 500ms;
-  }
 }
 
 .offer__loader {

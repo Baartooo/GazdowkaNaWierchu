@@ -10,6 +10,8 @@
 
   flex-direction: column;
   align-items: center;
+
+  animation: fadeInAnimation ease 1s;
 }
 
 .gallery__images {
@@ -47,13 +49,6 @@
   width: 45%;
 
   box-shadow: 0 0 10px 1px $color-black;
-
-  opacity: 0;
-
-  &.visible {
-    opacity: 1;
-    transition: 500ms;
-  }
 
   @media (min-width: $min-tablet) {
     margin-bottom: 2%;

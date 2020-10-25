@@ -8,14 +8,11 @@ interface ISegment {
   title: string;
   price: number;
   kids: string;
-
-  onPhotoLoad(): void;
 }
 
 const Segment: FC<ISegment> = (props) => {
   const {
     isPhotoOnLeft,
-    onPhotoLoad,
     imgSrc,
     title,
     price,
@@ -29,7 +26,6 @@ const Segment: FC<ISegment> = (props) => {
         <img
           className={'segment__photo'}
           src={imgSrc}
-          onLoad={onPhotoLoad}
           title={'Pokój - Gazdówka na Wierchu'}
           alt={'Pokój - Gazdówka na Wierchu'}
         />
