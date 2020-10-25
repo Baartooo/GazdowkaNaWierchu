@@ -1,11 +1,26 @@
 import React, { FC } from 'react';
 import CTAButton from '../../ctaButton/CTAButton';
+import { graphql, useStaticQuery } from 'gatsby';
+
 
 import offer from '../../../../static/ofertaSpecjalna2020.pdf';
 import './SeasonalOffer.scss';
 
 const SeasonalOffer: FC = (props) => {
 
+  const { contentfulOfertaSpecjalna } = useStaticQuery(
+    graphql`
+query offer {
+  contentfulOfertaSpecjalna {
+    dokument {
+      id
+      file {
+        url
+      }
+    }
+  }
+}
+   `);
 
   return (
     <div className={'seasonal'} id={'seasonal'}>
@@ -27,7 +42,7 @@ const SeasonalOffer: FC = (props) => {
 
         <span className={'seasonal__download-title'}>Pobierz aktualną ofertę specjalną</span>
 
-        <a className={'seasonall__download-link'} href={offer} target={'_blank'}>
+        <a className={'seasonall__download-link'} href={contentfulOfertaSpecjalna.dokument.file.url} target={'_blank'}>
           <CTAButton>
             Oferta specjalna
           </CTAButton>
