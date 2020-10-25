@@ -11,6 +11,8 @@
 
   flex-direction: column;
   align-items: center;
+
+  animation: fadeInAnimation ease 1s;
 }
 
 .contact__loader {
@@ -29,13 +31,6 @@
 
   flex-direction: column;
   align-items: center;
-
-  opacity: 0;
-
-  &.visible {
-    opacity: 1;
-    transition: 500ms;
-  }
 }
 
 .contact__info {

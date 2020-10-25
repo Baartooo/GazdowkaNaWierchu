@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
+import PageHeader from '../pageHeader/PageHeader';
 
 import './HeroHeader.scss';
-import PageHeader from '../pageHeader/PageHeader';
 
 interface IObjectPosition {
   x: string;
@@ -12,9 +12,6 @@ interface IHeroHeader {
   imageSrc: string;
   objectPosition: IObjectPosition;
   title: string;
-  isVisible: boolean;
-
-  checkInLoaded(): void;
 }
 
 const HeroHeader: FC<IHeroHeader> = (props) => {
@@ -22,19 +19,17 @@ const HeroHeader: FC<IHeroHeader> = (props) => {
     imageSrc,
     objectPosition,
     title,
-    isVisible,
-    checkInLoaded,
   } = props;
 
   return (
-    <div className={`hero ${isVisible ? 'visible' : ''}`}>
+    <div className={`hero`}>
       <img
         style={{
           objectPosition: `${objectPosition.x}
          ${objectPosition.y}`,
-        }} className={'hero__image'}
+        }}
+        className={'hero__image'}
         src={imageSrc}
-        onLoad={checkInLoaded}
         title={'Tatry'}
         alt={'Tatry'}
       />

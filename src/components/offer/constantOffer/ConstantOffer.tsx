@@ -6,12 +6,7 @@ import photo1 from '../../../assets/images/housePhoto3.jpg';
 import photo2 from '../../../assets/images/housePhoto5.jpg';
 import './ConstantOffer.scss';
 
-interface IConstantOffer {
-  onPhotoLoad(): void;
-}
-
-const ConstantOffer: FC<IConstantOffer> = (props) => {
-  const { onPhotoLoad } = props;
+const ConstantOffer: FC = (props) => {
 
 
   return (
@@ -20,7 +15,6 @@ const ConstantOffer: FC<IConstantOffer> = (props) => {
 
       <Segment
         isPhotoOnLeft={true}
-        onPhotoLoad={onPhotoLoad}
         imgSrc={photo1}
         title={'Nocleg + śniadanie/os/doba'}
         price={80}
@@ -30,7 +24,6 @@ const ConstantOffer: FC<IConstantOffer> = (props) => {
 
       <Segment
         isPhotoOnLeft={false}
-        onPhotoLoad={onPhotoLoad}
         imgSrc={photo2}
         title={'Nocleg + śniadanie + obiadokolacja/os/doba'}
         price={110}

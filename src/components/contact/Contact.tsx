@@ -48,20 +48,9 @@ const Contact: FC = (props) => {
           imageSrc={heroImg}
           objectPosition={{ x: '50%', y: '63%' }}
           title={'Kontakt'}
-          isVisible={areImagesVisible}
-          checkInLoaded={checkInLoaded}
         />
 
-        <Loader
-          visible={!areImagesVisible}
-          type={'TailSpin'}
-          color={'#343434'}
-          width={100}
-          height={100}
-          className={'contact__loader'}
-        />
-
-        <div className={`contact__content ${areImagesVisible ? 'visible' : ''}`}>
+        <div className={`contact__content`}>
           <div className={'contact__info'}>
             <a href={addressLink} className={'contact__segment'} target={'_blank'}>
               <Pin className={'contact__icon'} />
