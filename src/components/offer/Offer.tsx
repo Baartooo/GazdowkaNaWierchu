@@ -1,8 +1,7 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 
 import { gsap, ScrollToPlugin } from 'gsap/all';
 import StripeContainer from '../stripeContainer/StripeContainer';
-import Loader from 'react-loader-spinner';
 import OfferNavigation from './navigation/OfferNavigation';
 import HeroHeader from '../heroHeader/HeroHeader';
 import ConstantOffer from './constantOffer/ConstantOffer';

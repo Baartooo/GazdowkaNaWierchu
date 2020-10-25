@@ -1,9 +1,7 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import info from '../../company-info/info.json';
 import HeroHeader from '../heroHeader/HeroHeader';
 import StripeContainer from '../stripeContainer/StripeContainer';
-
-import Loader from 'react-loader-spinner';
 
 import card from '../../assets/images/businessCard.jpg';
 import heroImg from '../../assets/images/contactHeroImg.jpg';
@@ -15,8 +13,6 @@ import Pin from '../../assets/svg/pin.svg';
 import './Contact.scss';
 
 const Contact: FC = (props) => {
-  const [imagesToBeLoaded, setImagesToBeLoaded] = useState<number>(1);
-  const [areImagesVisible, setAreImagesVisible] = useState<boolean>(false);
 
   const {
     facebookName,
@@ -30,16 +26,6 @@ const Contact: FC = (props) => {
     companyInfoThirdLine,
     phoneNumber,
   } = info;
-
-  const checkInLoaded = (): void => {
-    setImagesToBeLoaded(imagesToBeLoaded => imagesToBeLoaded - 1);
-  };
-
-  useEffect(() => {
-    if (imagesToBeLoaded === 0) {
-      setAreImagesVisible(true);
-    }
-  }, [imagesToBeLoaded]);
 
   return (
     <StripeContainer isLight={true}>

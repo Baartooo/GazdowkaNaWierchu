@@ -1,7 +1,6 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 
 import HeroHeader from '../heroHeader/HeroHeader';
-import Loader from 'react-loader-spinner';
 
 import heroImg from '../../assets/images/aboutHeroImg.jpg';
 import './About.scss';

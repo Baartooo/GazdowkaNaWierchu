@@ -1,10 +1,9 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image/withIEPolyfill';
 
 import SimpleReactLightbox from 'simple-react-lightbox';
 import { SRLWrapper } from 'simple-react-lightbox';
-import Loader from 'react-loader-spinner';
 import StripeContainer from '../stripeContainer/StripeContainer';
 import HeroHeader from '../heroHeader/HeroHeader';
 
@@ -64,7 +63,8 @@ query MyQuery {
           objectPosition={{ x: '50%', y: '30%' }}
           title={'Galeria'}
           isVisible={true}
-          checkInLoaded={()=>{}}
+          checkInLoaded={() => {
+          }}
         />
 
         <div className={'gallery__images'}>
