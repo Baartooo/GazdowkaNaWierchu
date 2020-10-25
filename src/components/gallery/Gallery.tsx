@@ -62,9 +62,6 @@ query MyQuery {
           imageSrc={heroImg}
           objectPosition={{ x: '50%', y: '30%' }}
           title={'Galeria'}
-          isVisible={true}
-          checkInLoaded={() => {
-          }}
         />
 
         <div className={'gallery__images'}>
