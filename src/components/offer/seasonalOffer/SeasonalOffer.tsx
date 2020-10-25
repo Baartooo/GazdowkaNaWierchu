@@ -12,8 +12,7 @@ const SeasonalOffer: FC = (props) => {
     graphql`
 query offer {
   contentfulOfertaSpecjalna {
-    dokument {
-      id
+    oferta {
       file {
         url
       }
@@ -42,7 +41,7 @@ query offer {
 
         <span className={'seasonal__download-title'}>Pobierz aktualną ofertę specjalną</span>
 
-        <a className={'seasonall__download-link'} href={contentfulOfertaSpecjalna.dokument.file.url} target={'_blank'}>
+        <a className={'seasonall__download-link'} href={contentfulOfertaSpecjalna.oferta.file.url} target={'_blank'}>
           <CTAButton>
             Oferta specjalna
           </CTAButton>

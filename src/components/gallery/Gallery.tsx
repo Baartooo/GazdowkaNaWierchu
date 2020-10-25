@@ -35,7 +35,7 @@ export const Gallery: FC = (props) => {
 
   const { allContentfulZdjecieDoGalerii } = useStaticQuery(
     graphql`
-query MyQuery {
+query galleryPhotos {
   allContentfulZdjecieDoGalerii(sort: {fields: title}) {
     edges {
       node {

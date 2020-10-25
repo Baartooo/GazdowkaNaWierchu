@@ -11,8 +11,22 @@ import CTAButton from '../ctaButton/CTAButton';
 import terms from '../../../static/regulamin.pdf';
 import heroImg from '../../assets/images/offerHeroImage.jpg';
 import './Offer.scss';
+import { graphql, useStaticQuery } from 'gatsby';
 
 export const Offer: FC = (props) => {
+
+  const { contentfulRegulamin } = useStaticQuery(
+    graphql`
+query terms {
+  contentfulRegulamin {
+    regulamin {
+      file {
+        url
+      }
+    }
+  }
+}
+   `);
 
   gsap.registerPlugin(ScrollToPlugin);
 
@@ -55,7 +69,7 @@ export const Offer: FC = (props) => {
           </div>
 
           <p className={'offer__terms'}>Pobierz regulamin obiektu</p>
-          <a className={'offer__terms-link'} href={terms} target={'_blank'}>
+          <a className={'offer__terms-link'} href={contentfulRegulamin.regulamin.file.url} target={'_blank'}>
             <CTAButton>Regulamin</CTAButton>
           </a>
 
