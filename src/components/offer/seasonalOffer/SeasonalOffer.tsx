@@ -36,7 +36,7 @@ query offer {
           <li className={'seasonal__offer-item'}>Sylwester</li>
           <li className={'seasonal__offer-item'}>Ferie</li>
           <li className={'seasonal__offer-item'}>Wielkanoc</li>
-          <li className={'seasonal__offer-item'}>majówka</li>
+          <li className={'seasonal__offer-item'}>majówkę</li>
         </ul>
 
         <span className={'seasonal__download-title'}>Pobierz aktualną ofertę specjalną</span>
