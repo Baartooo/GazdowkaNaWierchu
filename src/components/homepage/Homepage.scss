@@ -1,0 +1,68 @@
+@import "../../styles/config";
+
+$whole-page-height: 100vh;
+
+.homepage {
+  width: 100vw;
+
+  margin-top: $navbar-height;
+
+  height: calc(#{$whole-page-height} - (#{$navbar-height} + #{$footer-height-mobile}));
+
+  overflow: hidden;
+
+  @media (min-width: $min-desktop) {
+    height: calc(#{$whole-page-height} - (#{$navbar-height} + #{$footer-height-desktop}));
+  }
+}
+
+.homepage__background {
+  width: 100vw;
+  height: 100%;
+
+  animation: fadeInAnimation ease 1s;
+  object-fit: cover;
+  object-position: 0 100%
+}
+
+.homepage__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeInAnimation ease 1s;
+
+}
+
+.homepage__welcome {
+  display: block;
+
+  color: white;
+  font-size: 22px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: $text-shadow;
+
+  @media (min-width: $min-mobile) {
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $min-tablet) {
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+
+  @media (min-width: $min-desktop) {
+    letter-spacing: 5px;
+  }
+
+}

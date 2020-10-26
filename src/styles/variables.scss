@@ -3,6 +3,15 @@ $container-gutter-mobile: $gutter;
 $container-gutter-tablet: 50px;
 $container-gutter-desktop: 70px;
 
+//important sizes
+$navbar-height: 60px;
+$footer-height-desktop: 80px;
+$footer-height-mobile: 190px;
+
+//shadows
+$text-shadow: 0 3px 10px #000;
+$box-shadow: 0 3px 10px 3px #000;
+
 // grid
 $grid-column-count: 12;
 $grid-baseline: 16px;
@@ -12,16 +21,23 @@ $page-width: 1290px;
 $page-limit: $page-width + ($container-gutter-desktop * 2);
 
 // Fonts
-$font-family: 'Roboto', sans-serif;
+$font-family: 'Montserrat', sans-serif;
 $font-heading: 'Open Sans', sans-serif;
 $font-size: 16px;
 $font-size-min: 13px;
+$font-weight-bold: 700;
 $line-height: 1.5;
 
 // Colors
 $color-font: #333;
 $color-background: #fff;
 $color-placeholder: #ddd;
+$color-white: #ffffff;
+$color-black: #000;
+$color-active-link: #ca842e;
+$color-menu: #343434;
+$linear-gradient-cta: linear-gradient(30deg, $color-white, $color-active-link 150%);
+$linear-gradient-cta-hover: linear-gradient(30deg, $color-menu, $color-active-link 175%);
 
 // Timings
 $transition-enter: 200ms;
@@ -77,7 +93,9 @@ $segment-padding: 200px; //percentage-based segments spacing
 // remove this map to disable vertical scaling
 // value 1 = height breakpoint, value 2 = multiplier
 $scale: (
-  (920px, 0.975),
-  (800px, 0.95),
-  (690px, 0.925),
+                (920px, 0.975),
+                (800px, 0.95),
+                (690px, 0.925),
 );
+
+

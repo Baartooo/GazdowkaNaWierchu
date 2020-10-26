@@ -30,15 +30,12 @@
 
 html,
 body {
-  min-height: 100vh;
-
   background-color: $color-background;
 }
 
 html {
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
-  overflow-y: scroll; // always show the vertical scrollbar so that content doesn't jump
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,6 +48,9 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+*::selection {
+  background: $color-active-link;
 }
 
 body {
@@ -88,5 +88,15 @@ select {
 
   &:-ms-input-placeholder {
     color: $color-placeholder;
+  }
+}
+
+//animations
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -1,0 +1,66 @@
+@import "../../../styles/config";
+
+.seasonal {
+  display: flex;
+
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  width: 100vw;
+
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.seasonal__header {
+  @include rf(20, 50);
+
+  margin-bottom: 30px;
+
+  color: $color-black;
+  font-weight: 500;
+}
+
+.seasonal__description {
+  display: flex;
+
+  width: 95%;
+
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $min-tablet) {
+    width: 70%;
+  }
+}
+
+.seasonal__description-header {
+  @include rf(14, 25);
+}
+
+.seasonal__offer {
+  @include rf(13, 24);
+
+  margin-top: 20px;
+
+  list-style-type: disc;
+}
+
+.seasonal__offer-item {
+
+}
+
+.seasonal__download-title {
+  @include rf(14, 25);
+
+  margin: 50px 0 10px;
+
+  font-weight: $font-weight-bold;
+
+}
+
+.seasonall__download-link {
+  text-decoration: none
+;
+}

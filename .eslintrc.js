@@ -1,19 +1,21 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
+  'env': {
+    'browser': true,
+    'es6': true,
   },
-  "plugins": [
-    "react",
+  'plugins': [
+    'react',
+    '@typescript-eslint',
   ],
-  "globals": {
-    "graphql": false,
+  'globals': {
+    'graphql': false,
   },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true,
+  'parser': '@typescript-eslint/parser',
+  'parserOptions': {
+    'sourceType': 'module',
+    'ecmaFeatures': {
+      'experimentalObjectRestSpread': true,
+      'jsx': true,
     },
-  }
-}
+  },
+};

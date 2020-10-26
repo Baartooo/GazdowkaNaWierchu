@@ -1,0 +1,121 @@
+@import "../../styles/config";
+
+
+.contact {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+
+  width: 100vw;
+
+  flex-direction: column;
+  align-items: center;
+
+  animation: fadeInAnimation ease 1s;
+}
+
+.contact__loader {
+  position: fixed;
+  z-index: 20;
+
+  top: 30%;
+}
+
+.contact__content {
+  display: flex;
+
+  padding-top: 50px;
+
+  width: 100%;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__info {
+  display: flex;
+
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @media (min-width: $min-tablet) {
+    justify-content: center;
+  }
+}
+
+.contact__segment {
+  display: flex;
+
+  margin-bottom: 30px;
+
+  width: 40%;
+
+  flex-direction: column;
+  align-items: center;
+
+  color: $color-black;
+  text-decoration: none;
+
+  transition: $transition-leave;
+
+  &:hover {
+    opacity: .7;
+    transform: scale(1.05);
+    transition: $transition-enter;
+  }
+
+  @media (min-width: $min-mobile) {
+    width: 30%;
+  }
+}
+
+.contact__icon {
+  margin-bottom: 10px;
+
+  width: 15%;
+
+  & path {
+    fill: $color-menu !important;
+  }
+}
+
+.contact__data {
+  @include rf(10, 20);
+
+  white-space: nowrap;
+  text-align: center;
+  font-weight: $font-weight-bold;
+}
+
+.contact__map {
+  margin: 30px 0 50px;
+
+  width: 90%;
+  height: 60vw;
+
+  box-shadow: $box-shadow;
+
+  @media (min-width: $min-desktop) {
+    width: 50%;
+    height: 30vw;
+  }
+}
+
+.contact__business-card {
+  margin: 30px 0;
+
+  width: 70%;
+
+  @media (min-width: $min-tablet) {
+    width: 20%;
+
+  }
+}
+
+.contact__card {
+  width: 100%;
+}

@@ -1,0 +1,55 @@
+@import "../../../styles/config";
+
+.offer-navigation {
+  display: flex;
+
+  margin: 20px 0;
+
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $min-tablet) {
+    margin-bottom: 100px;
+  }
+}
+
+.offer-navigation__separator {
+  height: 50px;
+
+  border-left: 1px solid black;
+
+  margin: 0 10px;
+}
+
+.offer-navigation__item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 10px;
+  padding: 10px 20px;
+
+  border: 1px solid $color-black;
+  border-radius: 5px;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  background: $linear-gradient-cta;
+
+  cursor: pointer;
+  transition: $transition-leave;
+  white-space: nowrap;
+
+  &:hover {
+    background: $linear-gradient-cta-hover;
+    color: $color-white;
+    transition: $transition-enter;
+  }
+
+  @media (min-width: $min-tablet) {
+    border-width: 2px;
+    font-size: $font-size;
+  }
+}

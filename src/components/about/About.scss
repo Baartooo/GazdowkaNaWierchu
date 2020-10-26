@@ -1,0 +1,123 @@
+@import "../../styles/config";
+
+.about {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+
+  width: 100vw;
+
+  flex-direction: column;
+  align-items: center;
+
+  animation: fadeInAnimation ease 1s;
+}
+
+.about__loader {
+  position: fixed;
+  z-index: 20;
+
+  top: 30%;
+}
+
+.about__content {
+  display: flex;
+
+  width: 100%;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__name {
+  @include rf(20, 30);
+
+  display: inline;
+}
+
+.about__header {
+  @include rf(15, 30);
+  display: flex;
+
+  margin-top: 30px;
+
+  width: 90%;
+
+  justify-content: center;
+
+  font-weight: $font-weight-bold;
+  text-align: center;
+  text-decoration: underline;
+
+  @media(min-width: $min-tablet) {
+    width: 70%;
+  }
+}
+
+.about__text {
+  @include rf(11, 23);
+
+  margin-top: 20px;
+
+  width: 90%;
+
+  font-weight: $font-weight-bold;
+
+  text-align: justify;
+
+  @media(min-width: $min-tablet) {
+    width: 70%;
+  }
+}
+
+.about__text-space {
+  margin-bottom: 10px;
+  @media (min-width: $min-tablet) {
+    margin-bottom: 30px;
+  }
+}
+
+.about__list {
+  @include rf(13, 23);
+
+  margin: 10px 0 0;
+
+  width: 90%;
+  list-style-type: disc;
+
+  @media (min-width: $min-tablet) {
+    margin: 20px 0;
+    width: 70%;
+  }
+}
+
+.about__item {
+  margin: 5px 0 10px 30px;
+
+  font-weight: 500;
+
+  @media(min-width: $min-tablet) {
+    margin: 5px 0 20px 30px;
+  }
+}
+
+.about__sub-list {
+  list-style-type: circle;
+}
+
+.about__sub-item {
+  margin: 5px 0 0 30px;
+}
+
+.about__text-bold {
+  font-weight: $font-weight-bold;
+}
+
+.about__ending {
+  @include rf(13, 23);
+
+  margin: 20px 10% 50px auto;
+
+  font-weight: 500;
+}

@@ -1,0 +1,27 @@
+@import "../../styles/config";
+
+.page-header {
+  position: absolute;
+  margin-top: 15px;
+
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: $font-weight-bold;
+  text-shadow: $text-shadow;
+
+  color: $color-white;
+
+  @media (min-width: $min-mobile) {
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $min-tablet) {
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+
+  @media (min-width: $min-desktop) {
+    letter-spacing: 5px;
+  }
+}
