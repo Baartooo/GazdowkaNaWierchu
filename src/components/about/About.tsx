@@ -29,11 +29,11 @@ const About: FC = (props) => {
           </p>
 
           <p className={'about__text'}>
-            Nasza Gazdówka znajduje na wysokości 900m n.p.m. W okresie zimowym zaleca się używanie łańcuchów na koła lub
+            Nasza Gazdówka znajduje się na wysokości 900m n.p.m. W okresie zimowym zaleca się używanie łańcuchów na koła lub
             napędu 4x4.
           </p>
           <p className={'about__text about__text-space'}>
-            Dom umiejscowiony jest nad wyciągiem narciarskim Toko-Land – 2min.
+            Dom umiejscowiony jest nad wyciągiem narciarskim Toko Land – 2min.
           </p>
           <p className={'about__text'}>
             Na naszych Gości czekają piękne pokoje; 2 -, 3 – i 4 – osobowe, a w niedalekiej
