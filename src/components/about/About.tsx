@@ -99,7 +99,7 @@ const About: FC = (props) => {
               Wyciągi narciarskie - swoje miejsce znajdą tutaj początkujący narciarze jak również profesjonaliści. W
               okolicy funkcjonuje wiele tras i wyciągów narciarskich:
               <ul className={'about__sub-list'}>
-                <li className={'about__sub-item'}>Tokoland – Bialy Dunajec: <span
+                <li className={'about__sub-item'}>Toko Land – Bialy Dunajec: <span
                   className={'about__text-bold'}>2min</span></li>
                 <li className={'about__sub-item'}>Stacja Narciarska Ski-Suche: <span
                   className={'about__text-bold'}>1,8 km</span></li>
