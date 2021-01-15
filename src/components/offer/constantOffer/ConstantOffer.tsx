@@ -18,7 +18,7 @@ const ConstantOffer: FC = (props) => {
         imgSrc={photo1}
         title={'Nocleg + śniadanie/os/doba'}
         price={90}
-        kids={'Dzieci w wieku 4-7 lat:  60zł'}
+        kids={'Dzieci w wieku 4-7 lat:  70zł'}
       />
       <div className={'constant__separator'} />
 
