@@ -19,7 +19,7 @@ export const Offer: FC = (props) => {
     graphql`
 query terms {
   contentfulRegulamin {
-    regulamin {
+    terms {
       file {
         url
       }
@@ -69,7 +69,7 @@ query terms {
           </div>
 
           <p className={'offer__terms'}>Pobierz regulamin obiektu</p>
-          <a className={'offer__terms-link'} href={contentfulRegulamin.regulamin.file.url} target={'_blank'}>
+          <a className={'offer__terms-link'} href={contentfulRegulamin.terms.file.url} target={'_blank'}>
             <CTAButton>Regulamin</CTAButton>
           </a>
 
