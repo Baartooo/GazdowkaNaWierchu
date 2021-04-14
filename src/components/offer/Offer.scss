@@ -34,11 +34,29 @@
 
 .offer__common,
 .offer__terms {
-  @include rf(12, 30);
-  text-align: center;
-  line-height: 180%;
+  @include rf(15, 26);
 
-  font-weight: $font-weight-bold;
+  padding: 0 15px;
+
+  text-align: center;
+  line-height: 1.8;
+
+  font-weight: 500;
+
+  @media (min-width: $min-tablet) {
+    padding: 0 50px;
+
+  }
+}
+
+.offer__title {
+  @include rf(20, 40);
+
+  font-weight: 700;
+}
+
+.offer__paragraph {
+  margin-bottom: 10px;
 }
 
 .offer__terms {
