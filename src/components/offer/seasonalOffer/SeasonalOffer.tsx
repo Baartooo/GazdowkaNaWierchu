@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
-import CTAButton from '../../ctaButton/CTAButton';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import CTAButton from '../../ctaButton/CTAButton';
 
-import offer from '../../../../static/ofertaSpecjalna2020.pdf';
 import './SeasonalOffer.scss';
 
 const SeasonalOffer: FC = (props) => {

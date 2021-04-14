@@ -1,4 +1,7 @@
 import React, { FC } from 'react';
+import { Link } from 'gatsby';
+
+import {gallery} from '../../../utils/routes';
 
 import Segment from '../offerSegment/OfferSegment';
 
@@ -10,27 +13,14 @@ const ConstantOffer: FC = (props) => {
 
 
   return (
-    <div className={'constant'} id={'constant'}>
-      <h2 className={'constant__header'}>Oferta stała</h2>
-
+    <div className={'constant'}>
+      <p className={'constant__header'}>Po więcej zdjęć zapraszamy do <Link to={gallery} className={'constant__link'}>Galerii</Link></p>
       <Segment
         isPhotoOnLeft={true}
-        imgSrc={photo1}
-        title={'Nocleg + śniadanie/os/doba'}
-        price={90}
-        kids={'Dzieci w wieku 4-7 lat:  70zł'}
+        imgSrcLeft={photo1}
+        imgSrcRight={photo2}
       />
       <div className={'constant__separator'} />
-
-      <Segment
-        isPhotoOnLeft={false}
-        imgSrc={photo2}
-        title={'Nocleg + śniadanie + obiadokolacja/os/doba'}
-        price={110}
-        kids={'Dzieci w wieku 4-7 lat: 90zł'}
-      />
-      <div className={'constant__separator'} />
-
     </div>
   );
 };
