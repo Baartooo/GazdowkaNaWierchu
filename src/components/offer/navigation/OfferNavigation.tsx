@@ -14,7 +14,7 @@ const OfferNavigation: FC<IOfferNavigation> = (props) => {
   return (
     <div className={'offer-navigation'}>
       <div className={'offer-navigation__item'} onClick={handleConstantClick}>
-        oferta stała
+        cennik
       </div>
 
       <div className={'offer-navigation__item'} onClick={handleSeasonalClick}>

@@ -3,7 +3,7 @@
 .constant {
   display: flex;
 
-  padding-top: 100px;
+  padding-top: 50px;
 
   width: 100vw;
 
@@ -13,12 +13,24 @@
 }
 
 .constant__header {
-  @include rf(20, 50);
+  @include rf(16, 30);
 
   margin-bottom: 20px;
 
   color: $color-black;
+
+  text-align: center;
   font-weight: 500;
+}
+
+.constant__link {
+  color: $color-black;
+
+  transition: 200ms;
+
+  &:hover {
+    opacity: .7;
+  }
 }
 
 .constant__separator {

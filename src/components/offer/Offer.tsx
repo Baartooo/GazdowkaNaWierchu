@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import { gsap, ScrollToPlugin } from 'gsap/all';
 import StripeContainer from '../stripeContainer/StripeContainer';
@@ -10,32 +11,44 @@ import CTAButton from '../ctaButton/CTAButton';
 
 import terms from '../../../static/regulamin.pdf';
 import heroImg from '../../assets/images/offerHeroImage.jpg';
+
 import './Offer.scss';
-import { graphql, useStaticQuery } from 'gatsby';
 
 export const Offer: FC = (props) => {
-
-  const { contentfulRegulamin } = useStaticQuery(
+  const {
+    contentfulRegulamin,
+    contentfulCennikPricesListContentRichTextNode: pricesList,
+  } = useStaticQuery(
     graphql`
-query terms {
-  contentfulRegulamin {
-    terms {
-      file {
-        url
-      }
-    }
-  }
-}
-   `);
+        query terms {
+            contentfulRegulamin {
+                terms {
+                    file {
+                        url
+                    }
+                }
+            }
+            contentfulCennikPricesListContentRichTextNode {
+                id
+                json
+            }
+        }
+    `);
+
+  const refPrices = useRef<HTMLDivElement>(null);
 
   gsap.registerPlugin(ScrollToPlugin);
 
-
   const scrollToConstant = () => {
-    gsap.to(window, {
-      scrollTo: '#constant',
-      duration: 1,
-    });
+    if (typeof window !== 'undefined' && refPrices.current) {
+
+      const pos = refPrices.current.offsetTop - 60;
+
+      gsap.to(window, {
+        scrollTo: pos,
+        duration: 1,
+      });
+    }
   };
 
   const scrollToSeasonal = () => {
@@ -60,12 +73,19 @@ query terms {
             handleSeasonalClick={scrollToSeasonal}
           />
 
-          <div className={'offer__common'}>
-            Cena jest uzależniona od sezonu i długości pobytu.<br />
-            Cena za pobyt zawiera opłatę klimatyczną.<br />
-            Dzieci poniżej 3 lat nieodpłatnie.<br /><br />
-            Śniadania wydawane są w godzinach 8.00-10.00.<br />
-            Obiadokolacja 17.00-19.00.<br />
+          <div className={'offer__common'} id={'constant'} ref={refPrices}>
+            <h1 className={'offer__title'}>Cennik</h1>
+            {
+              pricesList.json.content.map((p, i: number) => {
+                return <p className={'offer__paragraph'} key={i}>
+                  {
+                    p.content.map(line => {
+                      return <span dangerouslySetInnerHTML={{ __html: line.value }} />;
+                    })
+                  }
+                </p>;
+              })
+            }
           </div>
 
           <p className={'offer__terms'}>Pobierz regulamin obiektu</p>
@@ -73,8 +93,8 @@ query terms {
             <CTAButton>Regulamin</CTAButton>
           </a>
 
-          <ConstantOffer />
           <SeasonalOffer />
+          <ConstantOffer />
         </div>
 
       </section>
