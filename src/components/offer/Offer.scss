@@ -49,6 +49,12 @@
   }
 }
 
+.offer__title {
+  @include rf(20, 40);
+
+  font-weight: 700;
+}
+
 .offer__paragraph {
   margin-bottom: 10px;
 }

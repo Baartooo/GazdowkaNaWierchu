@@ -74,6 +74,7 @@ export const Offer: FC = (props) => {
           />
 
           <div className={'offer__common'} id={'constant'} ref={refPrices}>
+            <h1 className={'offer__title'}>Cennik</h1>
             {
               pricesList.json.content.map((p, i: number) => {
                 return <p className={'offer__paragraph'} key={i}>
