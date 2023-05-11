@@ -24,7 +24,8 @@ const Contact: FC = (props) => {
     companyInfoFirstLine,
     companyInfoSecondLine,
     companyInfoThirdLine,
-    phoneNumber,
+    phoneNumber1,
+    phoneNumber2,
   } = info;
 
   return (
@@ -45,12 +46,11 @@ const Contact: FC = (props) => {
                 {addressSecondLine}
               </p>
             </a>
-            <a href={`tel:${phoneNumber}`} className={'contact__segment'}>
+            <div  className={'contact__segment'}>
               <Phone className={'contact__icon'} />
-              <p className={'contact__data'}>
-                {phoneNumber}
-              </p>
-            </a>
+              <a href={`tel:${phoneNumber1}`} className={'contact__data'}>{phoneNumber1}</a>
+              <a href={`tel:${phoneNumber2}`} className={'contact__data'}>{phoneNumber2}</a>
+            </div>
             <a href={facebookLink} className={'contact__segment'} target={'_blank'}>
               <Facebook className={'contact__icon'} />
               <p className={'contact__data'}>

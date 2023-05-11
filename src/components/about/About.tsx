@@ -58,7 +58,7 @@ const About: FC = (props) => {
               Aneks kuchenny z lodówką
             </li>
             <li className={'about__item'}>
-              Sala do ping-ponga
+              Sala biesiadna z kominkiem elektrycznym
             </li>
             <li className={'about__item'}>
               Na naszych milusińskich
