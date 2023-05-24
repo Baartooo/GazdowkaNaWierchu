@@ -36,9 +36,9 @@ export const Navbar: FC = () => {
       <NavigationMobile isOpened={isNavigationOpened} toggleNavigation={toggleNavigation} />
 
       <div className={'navbar__phone-wrapper'}>
-        <a href={`tel:${info.phoneNumber}`} className={'navbar__phone-link'}>
+        <a href={`tel:${info.phoneNumber1}`} className={'navbar__phone-link'}>
           <Phone className={'navbar__phone'} />
-          <span className={'navbar__phone-number'}>{info.phoneNumber}</span>
+          <span className={'navbar__phone-number'}>{info.phoneNumber1}</span>
         </a>
       </div>
 

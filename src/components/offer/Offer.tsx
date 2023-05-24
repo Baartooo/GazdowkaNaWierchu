@@ -1,5 +1,6 @@
 import React, { FC, useRef } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 import { gsap, ScrollToPlugin } from 'gsap/all';
 import StripeContainer from '../stripeContainer/StripeContainer';
@@ -58,6 +59,7 @@ export const Offer: FC = (props) => {
     });
   };
 
+
   return (
     <StripeContainer>
       <section className={'offer'}>
@@ -75,17 +77,7 @@ export const Offer: FC = (props) => {
 
           <div className={'offer__common'} id={'constant'} ref={refPrices}>
             <h1 className={'offer__title'}>Cennik</h1>
-            {
-              pricesList.json.content.map((p, i: number) => {
-                return <p className={'offer__paragraph'} key={i}>
-                  {
-                    p.content.map(line => {
-                      return <span dangerouslySetInnerHTML={{ __html: line.value }} />;
-                    })
-                  }
-                </p>;
-              })
-            }
+            <div dangerouslySetInnerHTML={{__html: documentToHtmlString(pricesList.json)}}/>
           </div>
 
           <p className={'offer__terms'}>Pobierz regulamin obiektu</p>

@@ -43,6 +43,15 @@
 
   font-weight: 500;
 
+  a {
+    color: inherit;
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: .7;
+    }
+  }
+
   @media (min-width: $min-tablet) {
     padding: 0 50px;
 
